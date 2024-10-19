@@ -1,0 +1,161 @@
+param_name: ITERATIONS
+param_val: 10000
+
+param_name: n
+param_val: 100000
+
+CONTEXT
+2 4 0 0 0 2
+# e/i| P1   P2 |  1  
+   1    1    0 -10000    ## P1-10000 >= 0
+   1    0    1 -100000    ## P2-100000 >= 0
+[zyj-debug] Before affine transformations
+S1 "out[j] = out[j - 1];"
+ndims: 2; orig_depth: 2
+iterators: iter, j
+Index set
+Set #1
+[4 dims; 6 constraints]
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-1 >= 0
+-j+n+1 >= 0
+j-3 >= 0
+n-2 >= 0
+
+T(S1): (0, iter, 0, -j, 0)
+loop types (loop, loop, loop, loop, loop)
+
+Read accesses
+out[j-1]
+Write accesses
+out[j]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+
+S2 "out[2] = carry;"
+ndims: 1; orig_depth: 1
+iterators: iter
+Index set
+Set #1
+[3 dims; 3 constraints]
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-1 >= 0
+
+T(S2): (0, iter, 1, 0, 0)
+loop types (loop, loop, loop, scalar, scalar)
+
+Read accesses
+carry[0]
+Write accesses
+out[2]
+Original loop: 0 -> yes
+
+--- Dep 1 from S2 to S1; satisfied: 0, sat level: -1; Type: RAW
+on variable: out
+Dependence polyhedron
+Set #1
+[5 dims; 8 constraints]
+j'-3 = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+n-100000 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 2 from S1 to S1; satisfied: 0, sat level: -1; Type: RAW
+on variable: out
+Dependence polyhedron
+Set #1
+[6 dims; 10 constraints]
+-j+j'-1 = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+-j+n >= 0
+j-3 >= 0
+n-100000 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 3 from S1 to S1; satisfied: 0, sat level: -1; Type: WAR
+on variable: out
+Dependence polyhedron
+Set #1
+[6 dims; 8 constraints]
+-j+j'+1 = 0
+iter >= 0
+-iter'+ITERA-1 >= 0
+ITERA-10000 >= 0
+-j+n+1 >= 0
+j-4 >= 0
+n-100000 >= 0
+-iter+iter' >= 0
+
+
+--- Dep 4 from S1 to S2; satisfied: 0, sat level: -1; Type: WAR
+on variable: out
+Dependence polyhedron
+Set #1
+[5 dims; 8 constraints]
+j-3 = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+n-100000 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter' >= 0
+
+
+--- Dep 5 from S1 to S1; satisfied: 0, sat level: -1; Type: WAW
+on variable: out
+Dependence polyhedron
+Set #1
+[6 dims; 10 constraints]
+-j+j' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+-j+n+1 >= 0
+j-3 >= 0
+n-100000 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 6 from S2 to S2; satisfied: 0, sat level: -1; Type: WAW
+on variable: out
+Dependence polyhedron
+Set #1
+[4 dims; 7 constraints]
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+n-100000 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+[pluto] WARNING: working with original (identity) transformation (if they exist)
+[zyj-debug] After affine transformations
+T(S1): (0, iter, 0, -j, 0)
+loop types (scalar, loop, scalar, loop, scalar)
+
+T(S2): (0, iter, 1, 0, 0)
+loop types (scalar, loop, scalar, scalar, scalar)
+
+t1 --> parallel scalar (band 0)no-ujam
+t2 --> serial   loop   (band 0)no-ujam
+t3 --> fwd_dep  scalar (band 1)no-ujam
+t4 --> fwd_dep  loop   (band 1)no-ujam
+t5 --> parallel scalar (band 1)no-ujam
+

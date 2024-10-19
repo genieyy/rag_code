@@ -1,0 +1,298 @@
+param_name: ITERATIONS
+param_val: 10000
+
+param_name: nSlip
+param_val: 800
+
+CONTEXT
+2 4 0 0 0 2
+# e/i| P1   P2 |  1  
+   1    1    0 -10000    ## P1-10000 >= 0
+   1    0    1 -800    ## P2-800 >= 0
+[zyj-debug] Before affine transformations
+S1 "tau[n] = tauA * rateFact[n] * sgn[n];"
+ndims: 2; orig_depth: 2
+iterators: iter, n
+Index set
+Set #1
+[4 dims; 6 constraints]
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-1 >= 0
+n >= 0
+-n+nSlip-1 >= 0
+nSlip-1 >= 0
+
+T(S1): (0, iter, 0, n, 0, 0, 0)
+loop types (loop, loop, loop, loop, loop, scalar, scalar)
+
+Read accesses
+tauA[0]
+rateFact[n]
+sgn[n]
+Write accesses
+tau[n]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+
+S2 "dtcdgd[n][m] = tauH * deltaTime * rateFact[n];"
+ndims: 3; orig_depth: 3
+iterators: iter, n, m
+Index set
+Set #1
+[5 dims; 8 constraints]
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-1 >= 0
+n >= 0
+-n+nSlip-1 >= 0
+nSlip-1 >= 0
+m >= 0
+-m+nSlip-1 >= 0
+
+T(S2): (0, iter, 0, n, 1, m, 0)
+loop types (loop, loop, loop, loop, loop, loop, loop)
+
+Read accesses
+tauH[0]
+deltaTime[0]
+rateFact[n]
+Write accesses
+dtcdgd[n][m]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+Original loop: 2 -> yes
+
+S3 "dtcdgd[n][n] += tau[n] * rate_exp * sgn[n] * bor_array[n];"
+ndims: 2; orig_depth: 2
+iterators: iter, n
+Index set
+Set #1
+[4 dims; 6 constraints]
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-1 >= 0
+n >= 0
+-n+nSlip-1 >= 0
+nSlip-1 >= 0
+
+T(S3): (0, iter, 0, n, 2, 0, 0)
+loop types (loop, loop, loop, loop, loop, scalar, scalar)
+
+Read accesses
+dtcdgd[n][n]
+tau[n]
+rate_exp[0]
+sgn[n]
+bor_array[n]
+Write accesses
+dtcdgd[n][n]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+
+--- Dep 1 from S1 to S3; satisfied: 0, sat level: -1; Type: RAW
+on variable: tau
+Dependence polyhedron
+Set #1
+[6 dims; 8 constraints]
+-n+n' = 0
+iter >= 0
+-iter'+ITERA-1 >= 0
+ITERA-10000 >= 0
+n >= 0
+-n+nSlip-1 >= 0
+nSlip-800 >= 0
+-iter+iter' >= 0
+
+
+--- Dep 2 from S2 to S3; satisfied: 0, sat level: -1; Type: RAW
+on variable: dtcdgd
+Dependence polyhedron
+Set #1
+[7 dims; 9 constraints]
+-n+n' = 0
+-n+m = 0
+iter >= 0
+-iter+iter' >= 0
+ITERA-10000 >= 0
+n >= 0
+-n+nSlip-1 >= 0
+nSlip-800 >= 0
+-iter'+ITERA-1 >= 0
+
+
+--- Dep 3 from S3 to S3; satisfied: 0, sat level: -1; Type: RAW
+on variable: dtcdgd
+Dependence polyhedron
+Set #1
+[6 dims; 10 constraints]
+-n+n' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+n >= 0
+-n+nSlip-1 >= 0
+nSlip-800 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 4 from S3 to S3; satisfied: 0, sat level: -1; Type: WAR
+on variable: dtcdgd
+Dependence polyhedron
+Set #1
+[6 dims; 10 constraints]
+-n+n' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+n >= 0
+-n+nSlip-1 >= 0
+nSlip-800 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 5 from S3 to S2; satisfied: 0, sat level: -1; Type: WAR
+on variable: dtcdgd
+Dependence polyhedron
+Set #1
+[7 dims; 11 constraints]
+-n+m' = 0
+-n+n' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+n >= 0
+-n+nSlip-1 >= 0
+nSlip-800 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 6 from S3 to S1; satisfied: 0, sat level: -1; Type: WAR
+on variable: tau
+Dependence polyhedron
+Set #1
+[6 dims; 10 constraints]
+-n+n' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+n >= 0
+-n+nSlip-1 >= 0
+nSlip-800 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 7 from S2 to S2; satisfied: 0, sat level: -1; Type: WAW
+on variable: dtcdgd
+Dependence polyhedron
+Set #1
+[8 dims; 13 constraints]
+-m+m' = 0
+-n+n' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+n >= 0
+-n+nSlip-1 >= 0
+nSlip-800 >= 0
+m >= 0
+-m+nSlip-1 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 8 from S1 to S1; satisfied: 0, sat level: -1; Type: WAW
+on variable: tau
+Dependence polyhedron
+Set #1
+[6 dims; 10 constraints]
+-n+n' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+n >= 0
+-n+nSlip-1 >= 0
+nSlip-800 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 9 from S3 to S2; satisfied: 0, sat level: -1; Type: WAW
+on variable: dtcdgd
+Dependence polyhedron
+Set #1
+[7 dims; 11 constraints]
+-n+m' = 0
+-n+n' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+n >= 0
+-n+nSlip-1 >= 0
+nSlip-800 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 10 from S3 to S3; satisfied: 0, sat level: -1; Type: WAW
+on variable: dtcdgd
+Dependence polyhedron
+Set #1
+[6 dims; 10 constraints]
+-n+n' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+n >= 0
+-n+nSlip-1 >= 0
+nSlip-800 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 11 from S2 to S3; satisfied: 0, sat level: -1; Type: WAW
+on variable: dtcdgd
+Dependence polyhedron
+Set #1
+[7 dims; 9 constraints]
+-n+n' = 0
+-n+m = 0
+iter >= 0
+-iter+iter' >= 0
+ITERA-10000 >= 0
+n >= 0
+-n+nSlip-1 >= 0
+nSlip-800 >= 0
+-iter'+ITERA-1 >= 0
+
+
+[zyj-debug] After affine transformations
+T(S1): (zT2, zT3, zT4, n, iter, n, 1)
+loop types (loop, loop, loop, loop, loop, loop, scalar)
+
+T(S2): (zT3, zT4, zT5, n, iter, m, 0)
+loop types (loop, loop, loop, loop, loop, loop, scalar)
+
+T(S3): (zT2, zT3, zT4, n, iter, n, 2)
+loop types (loop, loop, loop, loop, loop, loop, scalar)
+
+t1 --> parallel loop   (band 0)no-ujam
+t2 --> fwd_dep  loop   (band 0)no-ujam
+t3 --> parallel loop   (band 0)no-ujam
+t4 --> parallel loop   (band 0)no-ujam
+t5 --> fwd_dep  loop   (band 0)no-ujam
+t6 --> parallel loop   (band 0)no-ujam
+t7 --> fwd_dep  scalar (band 1)no-ujam
+

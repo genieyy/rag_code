@@ -1,0 +1,14 @@
+param_name: iterations
+param_val: 100000
+
+param_name: LEN_1D
+param_val: 32000
+
+param_name: LEN_2D
+param_val: 256
+
+CONTEXT
+2 4 0 0 0 2
+# e/i| P1   P2 |  1  
+   1    1    0 -100000    ## P1-100000 >= 0
+   1    0    1 -32000    ## P2-32000 >= 0

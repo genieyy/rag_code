@@ -1,0 +1,193 @@
+param_name: _PB_M
+param_val: 1000
+
+param_name: _PB_N
+param_val: 1200
+
+CONTEXT
+2 4 0 0 0 2
+# e/i| P1   P2 |  1  
+   1    0    1 -1000    ## P2-1000 >= 0
+   1    1    0 -1200    ## P1-1200 >= 0
+[zyj-debug] Before affine transformations
+S1 "C[i][j] *= beta;"
+ndims: 2; orig_depth: 2
+iterators: i, j
+Index set
+Set #1
+[4 dims; 5 constraints]
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-1 >= 0
+j >= 0
+i-j >= 0
+
+T(S1): (0, i, 0, j, 0, 0, 0)
+loop types (loop, loop, loop, loop, loop, scalar, scalar)
+
+Read accesses
+C[i][j]
+beta[0]
+Write accesses
+C[i][j]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+
+S2 "C[i][j] += A[j][k]*alpha*B[i][k] + B[j][k]*alpha*A[i][k];"
+ndims: 3; orig_depth: 3
+iterators: i, k, j
+Index set
+Set #1
+[5 dims; 8 constraints]
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-1 >= 0
+k >= 0
+-k+_PB_M-1 >= 0
+_PB_M-1 >= 0
+j >= 0
+i-j >= 0
+
+T(S2): (0, i, 1, k, 0, j, 0)
+loop types (loop, loop, loop, loop, loop, loop, loop)
+
+Read accesses
+C[i][j]
+A[j][k]
+alpha[0]
+B[i][k]
+B[j][k]
+alpha[0]
+A[i][k]
+Write accesses
+C[i][j]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+Original loop: 2 -> yes
+
+--- Dep 1 from S1 to S2; satisfied: 0, sat level: -1; Type: RAW
+on variable: C
+Dependence polyhedron
+Set #1
+[7 dims; 10 constraints]
+-j+j' = 0
+-i+i' = 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-1200 >= 0
+j >= 0
+i-j >= 0
+_PB_M-1000 >= 0
+-k'+_PB_M-1 >= 0
+k' >= 0
+
+
+--- Dep 2 from S2 to S2; satisfied: 0, sat level: -1; Type: RAW
+on variable: C
+Dependence polyhedron
+Set #1
+[8 dims; 13 constraints]
+-j+j' = 0
+-i+i' = 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-1200 >= 0
+k >= 0
+-k+_PB_M-1 >= 0
+_PB_M-1000 >= 0
+j >= 0
+i-j >= 0
+-k'+_PB_M-1 >= 0
+k' >= 0
+-k+k'-1 >= 0
+
+
+--- Dep 3 from S1 to S2; satisfied: 0, sat level: -1; Type: WAR
+on variable: C
+Dependence polyhedron
+Set #1
+[7 dims; 10 constraints]
+-j+j' = 0
+-i+i' = 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-1200 >= 0
+j >= 0
+i-j >= 0
+_PB_M-1000 >= 0
+-k'+_PB_M-1 >= 0
+k' >= 0
+
+
+--- Dep 4 from S2 to S2; satisfied: 0, sat level: -1; Type: WAR
+on variable: C
+Dependence polyhedron
+Set #1
+[8 dims; 13 constraints]
+-j+j' = 0
+-i+i' = 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-1200 >= 0
+k >= 0
+-k+_PB_M-1 >= 0
+_PB_M-1000 >= 0
+j >= 0
+i-j >= 0
+-k'+_PB_M-1 >= 0
+k' >= 0
+-k+k'-1 >= 0
+
+
+--- Dep 5 from S2 to S2; satisfied: 0, sat level: -1; Type: WAW
+on variable: C
+Dependence polyhedron
+Set #1
+[8 dims; 13 constraints]
+-j+j' = 0
+-i+i' = 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-1200 >= 0
+k >= 0
+-k+_PB_M-1 >= 0
+_PB_M-1000 >= 0
+j >= 0
+i-j >= 0
+-k'+_PB_M-1 >= 0
+k' >= 0
+-k+k'-1 >= 0
+
+
+--- Dep 6 from S1 to S2; satisfied: 0, sat level: -1; Type: WAW
+on variable: C
+Dependence polyhedron
+Set #1
+[7 dims; 10 constraints]
+-j+j' = 0
+-i+i' = 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-1200 >= 0
+j >= 0
+i-j >= 0
+_PB_M-1000 >= 0
+-k'+_PB_M-1 >= 0
+k' >= 0
+
+
+[zyj-debug] After affine transformations
+T(S1): (0, zT2, zT3, i, j, 0, 0)
+loop types (scalar, loop, loop, loop, loop, scalar, scalar)
+
+T(S2): (1, zT3, zT4, zT5, i, j, k)
+loop types (scalar, loop, loop, loop, loop, loop, loop)
+
+t1 --> fwd_dep  scalar (band 0)no-ujam
+t2 --> parallel loop   (band 0)no-ujam
+t3 --> parallel loop   (band 0)no-ujam
+t4 --> fwd_dep  loop   (band 0)no-ujam
+t5 --> parallel loop   (band 0)no-ujam
+t6 --> parallel loop   (band 0)no-ujam
+t7 --> fwd_dep  loop   (band 0)no-ujam
+

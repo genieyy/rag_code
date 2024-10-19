@@ -1,0 +1,94 @@
+param_name: ITERATIONS
+param_val: 10000
+
+param_name: EXPMAX
+param_val: 100000
+
+CONTEXT
+2 4 0 0 0 2
+# e/i| P1   P2 |  1  
+   1    1    0 -10000    ## P1-10000 >= 0
+   1    0    1 -100000    ## P2-100000 >= 0
+[zyj-debug] Before affine transformations
+S1 "ex[i] = ex[i - 1] * ex[1];"
+ndims: 2; orig_depth: 2
+iterators: iter, i
+Index set
+Set #1
+[4 dims; 6 constraints]
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-1 >= 0
+i-2 >= 0
+-i+EXPMA >= 0
+EXPMA-2 >= 0
+
+T(S1): (0, iter, 0, i, 0)
+loop types (loop, loop, loop, loop, loop)
+
+Read accesses
+ex[i-1]
+ex[1]
+Write accesses
+ex[i]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+
+--- Dep 1 from S1 to S1; satisfied: 0, sat level: -1; Type: RAW
+on variable: ex
+Dependence polyhedron
+Set #1
+[6 dims; 8 constraints]
+-i+i'-1 = 0
+iter >= 0
+-iter'+ITERA-1 >= 0
+ITERA-10000 >= 0
+i-2 >= 0
+-i+EXPMA-1 >= 0
+EXPMA-100000 >= 0
+-iter+iter' >= 0
+
+
+--- Dep 2 from S1 to S1; satisfied: 0, sat level: -1; Type: WAR
+on variable: ex
+Dependence polyhedron
+Set #1
+[6 dims; 10 constraints]
+-i+i'+1 = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i-3 >= 0
+-i+EXPMA >= 0
+EXPMA-100000 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 3 from S1 to S1; satisfied: 0, sat level: -1; Type: WAW
+on variable: ex
+Dependence polyhedron
+Set #1
+[6 dims; 10 constraints]
+-i+i' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i-2 >= 0
+-i+EXPMA >= 0
+EXPMA-100000 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+[zyj-debug] After affine transformations
+T(S1): (zT2+zT3, zT3, iter, iter+i)
+loop types (loop, loop, loop, loop)
+
+t1 --> fwd_dep  loop   (band 0)no-ujam
+t2 --> fwd_dep  loop   (band 0)no-ujam
+t3 --> fwd_dep  loop   (band 0)no-ujam
+t4 --> fwd_dep  loop   (band 0)no-ujam
+

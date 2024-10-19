@@ -1,0 +1,761 @@
+param_name: _PB_M
+param_val: 1200
+
+param_name: _PB_N
+param_val: 1400
+
+CONTEXT
+2 4 0 0 0 2
+# e/i| P1   P2 |  1  
+   1    1    0 -1200    ## P1-1200 >= 0
+   1    0    1 -1400    ## P2-1400 >= 0
+[zyj-debug] Before affine transformations
+S1 "mean[j] = SCALAR_VAL(0.0);"
+ndims: 1; orig_depth: 1
+iterators: j
+Index set
+Set #1
+[3 dims; 3 constraints]
+j >= 0
+-j+_PB_M-1 >= 0
+_PB_M-1 >= 0
+
+T(S1): (0, j, 0, 0, 0, 0, 0)
+loop types (loop, loop, loop, scalar, scalar, scalar, scalar)
+
+No Read accesses
+Write accesses
+mean[j]
+Original loop: 0 -> yes
+
+S2 "mean[j] += data[i][j];"
+ndims: 2; orig_depth: 2
+iterators: j, i
+Index set
+Set #1
+[4 dims; 6 constraints]
+j >= 0
+-j+_PB_M-1 >= 0
+_PB_M-1 >= 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-1 >= 0
+
+T(S2): (0, j, 1, i, 0, 0, 0)
+loop types (loop, loop, loop, loop, loop, scalar, scalar)
+
+Read accesses
+mean[j]
+data[i][j]
+Write accesses
+mean[j]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+
+S3 "mean[j] /= float_n;"
+ndims: 1; orig_depth: 1
+iterators: j
+Index set
+Set #1
+[3 dims; 3 constraints]
+j >= 0
+-j+_PB_M-1 >= 0
+_PB_M-1 >= 0
+
+T(S3): (0, j, 2, 0, 0, 0, 0)
+loop types (loop, loop, loop, scalar, scalar, scalar, scalar)
+
+Read accesses
+mean[j]
+float_n[0]
+Write accesses
+mean[j]
+Original loop: 0 -> yes
+
+S4 "data[i][j] -= mean[j];"
+ndims: 2; orig_depth: 2
+iterators: i, j
+Index set
+Set #1
+[4 dims; 6 constraints]
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-1 >= 0
+j >= 0
+-j+_PB_M-1 >= 0
+_PB_M-1 >= 0
+
+T(S4): (1, i, 0, j, 0, 0, 0)
+loop types (loop, loop, loop, loop, loop, scalar, scalar)
+
+Read accesses
+data[i][j]
+mean[j]
+Write accesses
+data[i][j]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+
+S5 "cov[i][j] = SCALAR_VAL(0.0);"
+ndims: 2; orig_depth: 2
+iterators: i, j
+Index set
+Set #1
+[4 dims; 5 constraints]
+i >= 0
+-i+_PB_M-1 >= 0
+_PB_M-1 >= 0
+-i+j >= 0
+-j+_PB_M-1 >= 0
+
+T(S5): (2, i, 0, j, 0, 0, 0)
+loop types (loop, loop, loop, loop, loop, scalar, scalar)
+
+No Read accesses
+Write accesses
+cov[i][j]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+
+S6 "cov[i][j] += data[k][i] * data[k][j];"
+ndims: 3; orig_depth: 3
+iterators: i, j, k
+Index set
+Set #1
+[5 dims; 8 constraints]
+i >= 0
+-i+_PB_M-1 >= 0
+_PB_M-1 >= 0
+-i+j >= 0
+-j+_PB_M-1 >= 0
+k >= 0
+-k+_PB_N-1 >= 0
+_PB_N-1 >= 0
+
+T(S6): (2, i, 0, j, 1, k, 0)
+loop types (loop, loop, loop, loop, loop, loop, loop)
+
+Read accesses
+cov[i][j]
+data[k][i]
+data[k][j]
+Write accesses
+cov[i][j]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+Original loop: 2 -> yes
+
+S7 "cov[i][j] /= (float_n - SCALAR_VAL(1.0));"
+ndims: 2; orig_depth: 2
+iterators: i, j
+Index set
+Set #1
+[4 dims; 5 constraints]
+i >= 0
+-i+_PB_M-1 >= 0
+_PB_M-1 >= 0
+-i+j >= 0
+-j+_PB_M-1 >= 0
+
+T(S7): (2, i, 0, j, 2, 0, 0)
+loop types (loop, loop, loop, loop, loop, scalar, scalar)
+
+Read accesses
+cov[i][j]
+float_n[0]
+Write accesses
+cov[i][j]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+
+S8 "cov[j][i] = cov[i][j];"
+ndims: 2; orig_depth: 2
+iterators: i, j
+Index set
+Set #1
+[4 dims; 5 constraints]
+i >= 0
+-i+_PB_M-1 >= 0
+_PB_M-1 >= 0
+-i+j >= 0
+-j+_PB_M-1 >= 0
+
+T(S8): (2, i, 0, j, 3, 0, 0)
+loop types (loop, loop, loop, loop, loop, scalar, scalar)
+
+Read accesses
+cov[i][j]
+Write accesses
+cov[j][i]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+
+--- Dep 1 from S2 to S2; satisfied: 0, sat level: -1; Type: RAW
+on variable: mean
+Dependence polyhedron
+Set #1
+[6 dims; 10 constraints]
+-j+j' = 0
+j >= 0
+-j+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-1400 >= 0
+-i'+_PB_N-1 >= 0
+i' >= 0
+-i+i'-1 >= 0
+
+
+--- Dep 2 from S6 to S8; satisfied: 0, sat level: -1; Type: RAW
+on variable: cov
+Dependence polyhedron
+Set #1
+[7 dims; 10 constraints]
+-j+j' = 0
+-i+i' = 0
+i >= 0
+-i+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+-i+j >= 0
+-j+_PB_M-1 >= 0
+k >= 0
+-k+_PB_N-1 >= 0
+_PB_N-1400 >= 0
+
+
+--- Dep 3 from S6 to S6; satisfied: 0, sat level: -1; Type: RAW
+on variable: cov
+Dependence polyhedron
+Set #1
+[8 dims; 13 constraints]
+-j+j' = 0
+-i+i' = 0
+i >= 0
+-i+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+-i+j >= 0
+-j+_PB_M-1 >= 0
+k >= 0
+-k+_PB_N-1 >= 0
+_PB_N-1400 >= 0
+-k'+_PB_N-1 >= 0
+k' >= 0
+-k+k'-1 >= 0
+
+
+--- Dep 4 from S2 to S3; satisfied: 0, sat level: -1; Type: RAW
+on variable: mean
+Dependence polyhedron
+Set #1
+[5 dims; 7 constraints]
+-j+j' = 0
+j >= 0
+-j+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-1400 >= 0
+
+
+--- Dep 5 from S6 to S7; satisfied: 0, sat level: -1; Type: RAW
+on variable: cov
+Dependence polyhedron
+Set #1
+[7 dims; 10 constraints]
+-j+j' = 0
+-i+i' = 0
+i >= 0
+-i+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+-i+j >= 0
+-j+_PB_M-1 >= 0
+k >= 0
+-k+_PB_N-1 >= 0
+_PB_N-1400 >= 0
+
+
+--- Dep 6 from S1 to S4; satisfied: 0, sat level: -1; Type: RAW
+on variable: mean
+Dependence polyhedron
+Set #1
+[5 dims; 7 constraints]
+-j+j' = 0
+j >= 0
+-j+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+_PB_N-1400 >= 0
+i' >= 0
+-i'+_PB_N-1 >= 0
+
+
+--- Dep 7 from S5 to S7; satisfied: 0, sat level: -1; Type: RAW
+on variable: cov
+Dependence polyhedron
+Set #1
+[6 dims; 8 constraints]
+-j+j' = 0
+-i+i' = 0
+i >= 0
+-i+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+-i+j >= 0
+-j+_PB_M-1 >= 0
+_PB_N-1400 >= 0
+
+
+--- Dep 8 from S4 to S6; satisfied: 0, sat level: -1; Type: RAW
+on variable: data
+Dependence polyhedron
+Set #1
+[7 dims; 11 constraints]
+-i+k' = 0
+-j+j' = 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-1400 >= 0
+j >= 0
+-j+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+i' >= 0
+-i'+_PB_M-1 >= 0
+j-i' >= 0
+
+
+--- Dep 9 from S5 to S8; satisfied: 0, sat level: -1; Type: RAW
+on variable: cov
+Dependence polyhedron
+Set #1
+[6 dims; 8 constraints]
+-j+j' = 0
+-i+i' = 0
+i >= 0
+-i+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+-i+j >= 0
+-j+_PB_M-1 >= 0
+_PB_N-1400 >= 0
+
+
+--- Dep 10 from S4 to S6; satisfied: 0, sat level: -1; Type: RAW
+on variable: data
+Dependence polyhedron
+Set #1
+[7 dims; 10 constraints]
+-i+k' = 0
+-j+i' = 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-1400 >= 0
+j >= 0
+-j+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+-j'+_PB_M-1 >= 0
+-j+j' >= 0
+
+
+--- Dep 11 from S2 to S4; satisfied: 0, sat level: -1; Type: RAW
+on variable: mean
+Dependence polyhedron
+Set #1
+[6 dims; 9 constraints]
+-j+j' = 0
+j >= 0
+-j+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-1400 >= 0
+i' >= 0
+-i'+_PB_N-1 >= 0
+
+
+--- Dep 12 from S7 to S8; satisfied: 0, sat level: -1; Type: RAW
+on variable: cov
+Dependence polyhedron
+Set #1
+[6 dims; 8 constraints]
+-j+j' = 0
+-i+i' = 0
+i >= 0
+-i+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+-i+j >= 0
+-j+_PB_M-1 >= 0
+_PB_N-1400 >= 0
+
+
+--- Dep 13 from S3 to S4; satisfied: 0, sat level: -1; Type: RAW
+on variable: mean
+Dependence polyhedron
+Set #1
+[5 dims; 7 constraints]
+-j+j' = 0
+j >= 0
+-j+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+_PB_N-1400 >= 0
+i' >= 0
+-i'+_PB_N-1 >= 0
+
+
+--- Dep 14 from S1 to S2; satisfied: 0, sat level: -1; Type: RAW
+on variable: mean
+Dependence polyhedron
+Set #1
+[5 dims; 7 constraints]
+-j+j' = 0
+j >= 0
+-j+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+_PB_N-1400 >= 0
+-i'+_PB_N-1 >= 0
+i' >= 0
+
+
+--- Dep 15 from S5 to S6; satisfied: 0, sat level: -1; Type: RAW
+on variable: cov
+Dependence polyhedron
+Set #1
+[7 dims; 10 constraints]
+-j+j' = 0
+-i+i' = 0
+i >= 0
+-i+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+-i+j >= 0
+-j+_PB_M-1 >= 0
+_PB_N-1400 >= 0
+-k'+_PB_N-1 >= 0
+k' >= 0
+
+
+--- Dep 16 from S1 to S3; satisfied: 0, sat level: -1; Type: RAW
+on variable: mean
+Dependence polyhedron
+Set #1
+[4 dims; 5 constraints]
+-j+j' = 0
+j >= 0
+-j+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+_PB_N-1400 >= 0
+
+
+--- Dep 17 from S2 to S3; satisfied: 0, sat level: -1; Type: WAR
+on variable: mean
+Dependence polyhedron
+Set #1
+[5 dims; 7 constraints]
+-j+j' = 0
+j >= 0
+-j+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-1400 >= 0
+
+
+--- Dep 18 from S2 to S2; satisfied: 0, sat level: -1; Type: WAR
+on variable: mean
+Dependence polyhedron
+Set #1
+[6 dims; 10 constraints]
+-j+j' = 0
+j >= 0
+-j+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-1400 >= 0
+-i'+_PB_N-1 >= 0
+i' >= 0
+-i+i'-1 >= 0
+
+
+--- Dep 19 from S2 to S4; satisfied: 0, sat level: -1; Type: WAR
+on variable: data
+Dependence polyhedron
+Set #1
+[6 dims; 8 constraints]
+-j+j' = 0
+-i+i' = 0
+j >= 0
+-j+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-1400 >= 0
+
+
+--- Dep 20 from S6 to S8; satisfied: 0, sat level: -1; Type: WAR
+on variable: cov
+Dependence polyhedron
+Set #1
+[7 dims; 9 constraints]
+-i+j' = 0
+-i+i' = 0
+-i+j = 0
+i >= 0
+-i+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+_PB_N-1400 >= 0
+-k+_PB_N-1 >= 0
+k >= 0
+
+
+--- Dep 21 from S6 to S7; satisfied: 0, sat level: -1; Type: WAR
+on variable: cov
+Dependence polyhedron
+Set #1
+[7 dims; 10 constraints]
+-j+j' = 0
+-i+i' = 0
+i >= 0
+-i+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+-i+j >= 0
+-j+_PB_M-1 >= 0
+k >= 0
+-k+_PB_N-1 >= 0
+_PB_N-1400 >= 0
+
+
+--- Dep 22 from S6 to S6; satisfied: 0, sat level: -1; Type: WAR
+on variable: cov
+Dependence polyhedron
+Set #1
+[8 dims; 13 constraints]
+-j+j' = 0
+-i+i' = 0
+i >= 0
+-i+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+-i+j >= 0
+-j+_PB_M-1 >= 0
+k >= 0
+-k+_PB_N-1 >= 0
+_PB_N-1400 >= 0
+-k'+_PB_N-1 >= 0
+k' >= 0
+-k+k'-1 >= 0
+
+
+--- Dep 23 from S7 to S8; satisfied: 0, sat level: -1; Type: WAR
+on variable: cov
+Dependence polyhedron
+Set #1
+[6 dims; 7 constraints]
+-i+j' = 0
+-i+i' = 0
+-i+j = 0
+i >= 0
+-i+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+_PB_N-1400 >= 0
+
+
+--- Dep 24 from S6 to S6; satisfied: 0, sat level: -1; Type: WAW
+on variable: cov
+Dependence polyhedron
+Set #1
+[8 dims; 13 constraints]
+-j+j' = 0
+-i+i' = 0
+i >= 0
+-i+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+-i+j >= 0
+-j+_PB_M-1 >= 0
+k >= 0
+-k+_PB_N-1 >= 0
+_PB_N-1400 >= 0
+-k'+_PB_N-1 >= 0
+k' >= 0
+-k+k'-1 >= 0
+
+
+--- Dep 25 from S2 to S3; satisfied: 0, sat level: -1; Type: WAW
+on variable: mean
+Dependence polyhedron
+Set #1
+[5 dims; 7 constraints]
+-j+j' = 0
+j >= 0
+-j+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-1400 >= 0
+
+
+--- Dep 26 from S6 to S7; satisfied: 0, sat level: -1; Type: WAW
+on variable: cov
+Dependence polyhedron
+Set #1
+[7 dims; 10 constraints]
+-j+j' = 0
+-i+i' = 0
+i >= 0
+-i+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+-i+j >= 0
+-j+_PB_M-1 >= 0
+k >= 0
+-k+_PB_N-1 >= 0
+_PB_N-1400 >= 0
+
+
+--- Dep 27 from S5 to S8; satisfied: 0, sat level: -1; Type: WAW
+on variable: cov
+Dependence polyhedron
+Set #1
+[6 dims; 7 constraints]
+-i+j' = 0
+-i+i' = 0
+-i+j = 0
+i >= 0
+-i+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+_PB_N-1400 >= 0
+
+
+--- Dep 28 from S1 to S3; satisfied: 0, sat level: -1; Type: WAW
+on variable: mean
+Dependence polyhedron
+Set #1
+[4 dims; 5 constraints]
+-j+j' = 0
+j >= 0
+-j+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+_PB_N-1400 >= 0
+
+
+--- Dep 29 from S7 to S8; satisfied: 0, sat level: -1; Type: WAW
+on variable: cov
+Dependence polyhedron
+Set #1
+[6 dims; 7 constraints]
+-i+j' = 0
+-i+i' = 0
+-i+j = 0
+i >= 0
+-i+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+_PB_N-1400 >= 0
+
+
+--- Dep 30 from S6 to S8; satisfied: 0, sat level: -1; Type: WAW
+on variable: cov
+Dependence polyhedron
+Set #1
+[7 dims; 9 constraints]
+-i+j' = 0
+-i+i' = 0
+-i+j = 0
+i >= 0
+-i+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+_PB_N-1400 >= 0
+-k+_PB_N-1 >= 0
+k >= 0
+
+
+--- Dep 31 from S2 to S2; satisfied: 0, sat level: -1; Type: WAW
+on variable: mean
+Dependence polyhedron
+Set #1
+[6 dims; 10 constraints]
+-j+j' = 0
+j >= 0
+-j+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-1400 >= 0
+-i'+_PB_N-1 >= 0
+i' >= 0
+-i+i'-1 >= 0
+
+
+--- Dep 32 from S1 to S2; satisfied: 0, sat level: -1; Type: WAW
+on variable: mean
+Dependence polyhedron
+Set #1
+[5 dims; 7 constraints]
+-j+j' = 0
+j >= 0
+-j+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+_PB_N-1400 >= 0
+-i'+_PB_N-1 >= 0
+i' >= 0
+
+
+--- Dep 33 from S5 to S7; satisfied: 0, sat level: -1; Type: WAW
+on variable: cov
+Dependence polyhedron
+Set #1
+[6 dims; 8 constraints]
+-j+j' = 0
+-i+i' = 0
+i >= 0
+-i+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+-i+j >= 0
+-j+_PB_M-1 >= 0
+_PB_N-1400 >= 0
+
+
+--- Dep 34 from S5 to S6; satisfied: 0, sat level: -1; Type: WAW
+on variable: cov
+Dependence polyhedron
+Set #1
+[7 dims; 10 constraints]
+-j+j' = 0
+-i+i' = 0
+i >= 0
+-i+_PB_M-1 >= 0
+_PB_M-1200 >= 0
+-i+j >= 0
+-j+_PB_M-1 >= 0
+_PB_N-1400 >= 0
+-k'+_PB_N-1 >= 0
+k' >= 0
+
+
+[zyj-debug] After affine transformations
+T(S1): (1, zT1, j, 0, 0, 7, 0, 0)
+loop types (scalar, loop, loop, scalar, scalar, scalar, scalar, scalar)
+
+T(S2): (2, zT2, zT3, i, j, 0, 6, 0)
+loop types (scalar, loop, loop, loop, loop, scalar, scalar, scalar)
+
+T(S3): (3, zT1, j, 0, 0, 5, 0, 0)
+loop types (scalar, loop, loop, scalar, scalar, scalar, scalar, scalar)
+
+T(S4): (4, zT2, zT3, i, j, 0, 4, 0)
+loop types (scalar, loop, loop, loop, loop, scalar, scalar, scalar)
+
+T(S5): (0, zT2, zT3, i, j, 0, 3, 0)
+loop types (scalar, loop, loop, loop, loop, scalar, scalar, scalar)
+
+T(S6): (5, zT3, zT4, zT5, i, k, j, 2)
+loop types (scalar, loop, loop, loop, loop, loop, loop, scalar)
+
+T(S7): (6, zT2, zT3, i, j, 0, 0, 0)
+loop types (scalar, loop, loop, loop, loop, scalar, scalar, scalar)
+
+T(S8): (6, zT2, zT3, i, j, 0, 1, 0)
+loop types (scalar, loop, loop, loop, loop, scalar, scalar, scalar)
+
+t1 --> fwd_dep  scalar (band 0)no-ujam
+t2 --> parallel loop   (band 0)no-ujam
+t3 --> fwd_dep  loop   (band 0)no-ujam
+t4 --> fwd_dep  loop   (band 0)no-ujam
+t5 --> parallel loop   (band 0)no-ujam
+t6 --> fwd_dep  loop   (band 0)no-ujam
+t7 --> fwd_dep  loop   (band 0)no-ujam
+t8 --> parallel scalar (band 0)no-ujam
+

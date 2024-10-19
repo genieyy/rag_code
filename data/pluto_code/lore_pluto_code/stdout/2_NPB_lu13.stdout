@@ -1,0 +1,168 @@
+param_name: ITERATIONS
+param_val: 10000
+
+param_name: iend
+param_val: 40
+
+param_name: jend
+param_val: 50
+
+param_name: nz
+param_val: 60
+
+param_name: n
+param_val: 5
+
+CONTEXT
+5 9 0 0 0 7
+# e/i| P1   P2   P3   P4   P5   P6   P7 |  1  
+   1    1    0    0    0    0    0    0 -10000    ## P1-10000 >= 0
+   1    0    0    1    0    0    0    0  -40    ## P3-40 >= 0
+   1    0    0    0    0    1    0    0  -50    ## P5-50 >= 0
+   1    0    0    0    0    0    1    0  -60    ## P6-60 >= 0
+   1    0    0    0    0    0    0    1   -5    ## P7-5 >= 0
+[zyj-debug] Before affine transformations
+S1 "rsd[i][j][k][m] = dt * rsd[i][j][k][m];"
+ndims: 5; orig_depth: 5
+iterators: iter, i, j, k, m
+Index set
+Set #1
+[12 dims; 15 constraints]
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-1 >= 0
+i-ist >= 0
+-i+iend >= 0
+-ist+iend >= 0
+j-jst >= 0
+-j+jend >= 0
+-jst+jend >= 0
+k-1 >= 0
+-k+nz-2 >= 0
+nz-3 >= 0
+m >= 0
+-m+n-1 >= 0
+n-1 >= 0
+
+T(S1): (0, iter, 0, i, 0, j, 0, k, 0, m, 0)
+loop types (loop, loop, loop, loop, loop, loop, loop, loop, loop, loop, loop)
+
+Read accesses
+dt[0]
+rsd[i][j][k][m]
+Write accesses
+rsd[i][j][k][m]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+Original loop: 2 -> yes
+Original loop: 3 -> yes
+Original loop: 4 -> yes
+
+--- Dep 1 from S1 to S1; satisfied: 0, sat level: -1; Type: RAW
+on variable: rsd
+Dependence polyhedron
+Set #1
+[17 dims; 24 constraints]
+-m+m' = 0
+-k+k' = 0
+-j+j' = 0
+-i+i' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i-ist >= 0
+-i+iend >= 0
+-ist+iend >= 0
+j-jst >= 0
+-j+jend >= 0
+-jst+jend >= 0
+k-1 >= 0
+-k+nz-2 >= 0
+nz-60 >= 0
+m >= 0
+-m+n-1 >= 0
+n-5 >= 0
+jend-50 >= 0
+iend-40 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 2 from S1 to S1; satisfied: 0, sat level: -1; Type: WAR
+on variable: rsd
+Dependence polyhedron
+Set #1
+[17 dims; 24 constraints]
+-m+m' = 0
+-k+k' = 0
+-j+j' = 0
+-i+i' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i-ist >= 0
+-i+iend >= 0
+-ist+iend >= 0
+j-jst >= 0
+-j+jend >= 0
+-jst+jend >= 0
+k-1 >= 0
+-k+nz-2 >= 0
+nz-60 >= 0
+m >= 0
+-m+n-1 >= 0
+n-5 >= 0
+jend-50 >= 0
+iend-40 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 3 from S1 to S1; satisfied: 0, sat level: -1; Type: WAW
+on variable: rsd
+Dependence polyhedron
+Set #1
+[17 dims; 24 constraints]
+-m+m' = 0
+-k+k' = 0
+-j+j' = 0
+-i+i' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i-ist >= 0
+-i+iend >= 0
+-ist+iend >= 0
+j-jst >= 0
+-j+jend >= 0
+-jst+jend >= 0
+k-1 >= 0
+-k+nz-2 >= 0
+nz-60 >= 0
+m >= 0
+-m+n-1 >= 0
+n-5 >= 0
+jend-50 >= 0
+iend-40 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+[zyj-debug] After affine transformations
+T(S1): (zT5, zT6, zT7, zT8, zT9, i, j, k, iter, m)
+loop types (loop, loop, loop, loop, loop, loop, loop, loop, loop, loop)
+
+t1 --> parallel loop   (band 0)no-ujam
+t2 --> parallel loop   (band 0)no-ujam
+t3 --> parallel loop   (band 0)no-ujam
+t4 --> parallel loop   (band 0)no-ujam
+t5 --> fwd_dep  loop   (band 0)no-ujam
+t6 --> parallel loop   (band 0)no-ujam
+t7 --> parallel loop   (band 0)no-ujam
+t8 --> parallel loop   (band 0)no-ujam
+t9 --> fwd_dep  loop   (band 0)no-ujam
+t10 --> parallel loop   (band 0)no-ujam
+

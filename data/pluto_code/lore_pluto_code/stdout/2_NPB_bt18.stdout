@@ -1,0 +1,336 @@
+param_name: ITERATIONS
+param_val: 10000
+
+param_name: nz
+param_val: 10
+
+param_name: mz
+param_val: 12
+
+param_name: q
+param_val: 14
+
+param_name: BLOCK_SIZE
+param_val: 16
+
+CONTEXT
+5 7 0 0 0 5
+# e/i| P1   P2   P3   P4   P5 |  1  
+   1    1    0    0    0    0 -10000    ## P1-10000 >= 0
+   1    0    1    0    0    0  -10    ## P2-10 >= 0
+   1    0    0    1    0    0  -12    ## P3-12 >= 0
+   1    0    0    0    1    0  -14    ## P4-14 >= 0
+   1    0    0    0    0    1  -16    ## P5-16 >= 0
+[zyj-debug] Before affine transformations
+S1 "rhs[i][j][k][m] = rhs[i][j][k][m] - lhs[i][j][k][m][n] * rhs[i][j][k + 1][n];"
+ndims: 6; orig_depth: 6
+iterators: iter, i, j, k, m, n
+Index set
+Set #1
+[11 dims; 17 constraints]
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-1 >= 0
+i-1 >= 0
+-i+nz-2 >= 0
+nz-3 >= 0
+j-1 >= 0
+-j+mz-2 >= 0
+mz-3 >= 0
+-k+q-2 >= 0
+k >= 0
+q-2 >= 0
+m >= 0
+-m+BLOCK-1 >= 0
+BLOCK-1 >= 0
+n >= 0
+-n+BLOCK-1 >= 0
+
+T(S1): (0, iter, 0, i, 0, j, 0, -k, 0, m, 0, n, 0)
+loop types (loop, loop, loop, loop, loop, loop, loop, loop, loop, loop, loop, loop, loop)
+
+Read accesses
+rhs[i][j][k][m]
+lhs[i][j][k][m][n]
+rhs[i][j][k+1][n]
+Write accesses
+rhs[i][j][k][m]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+Original loop: 2 -> yes
+Original loop: 3 -> yes
+Original loop: 4 -> yes
+Original loop: 5 -> yes
+
+--- Dep 1 from S1 to S1; satisfied: 0, sat level: -1; Type: RAW
+on variable: rhs
+Dependence polyhedron
+Set #1
+[17 dims; 24 constraints]
+-m+n' = 0
+-k+k'+1 = 0
+-j+j' = 0
+-i+i' = 0
+iter >= 0
+m' >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+nz-2 >= 0
+nz-10 >= 0
+j-1 >= 0
+-j+mz-2 >= 0
+mz-12 >= 0
+-k+q-2 >= 0
+k-1 >= 0
+q-14 >= 0
+m >= 0
+-m+BLOCK-1 >= 0
+BLOCK-16 >= 0
+n >= 0
+-n+BLOCK-1 >= 0
+-iter+iter' >= 0
+-iter'+ITERA-1 >= 0
+-m'+BLOCK-1 >= 0
+
+
+--- Dep 2 from S1 to S1; satisfied: 0, sat level: -1; Type: RAW
+on variable: rhs
+Dependence polyhedron
+Set #1
+[17 dims; 24 constraints]
+-m+m' = 0
+-k+k' = 0
+-j+j' = 0
+-i+i' = 0
+iter >= 0
+n' >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+nz-2 >= 0
+nz-10 >= 0
+j-1 >= 0
+-j+mz-2 >= 0
+mz-12 >= 0
+-k+q-2 >= 0
+k >= 0
+q-14 >= 0
+m >= 0
+-m+BLOCK-1 >= 0
+BLOCK-16 >= 0
+n >= 0
+-n+BLOCK-1 >= 0
+-iter+iter'-1 >= 0
+-iter'+ITERA-1 >= 0
+-n'+BLOCK-1 >= 0
+
+
+--- Dep 3 from S1 to S1; satisfied: 0, sat level: -1; Type: RAW
+on variable: rhs
+Dependence polyhedron
+Set #1
+[17 dims; 23 constraints]
+-m+m' = 0
+-k+k' = 0
+-j+j' = 0
+-i+i' = 0
+-iter+iter' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+nz-2 >= 0
+nz-10 >= 0
+j-1 >= 0
+-j+mz-2 >= 0
+mz-12 >= 0
+-k+q-2 >= 0
+k >= 0
+q-14 >= 0
+m >= 0
+-m+BLOCK-1 >= 0
+BLOCK-16 >= 0
+n >= 0
+-n'+BLOCK-1 >= 0
+-n+n'-1 >= 0
+
+
+--- Dep 4 from S1 to S1; satisfied: 0, sat level: -1; Type: WAR
+on variable: rhs
+Dependence polyhedron
+Set #1
+[17 dims; 26 constraints]
+-n+m' = 0
+-k+k'-1 = 0
+-j+j' = 0
+-i+i' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+nz-2 >= 0
+nz-10 >= 0
+j-1 >= 0
+-j+mz-2 >= 0
+mz-12 >= 0
+-k+q-3 >= 0
+k >= 0
+q-14 >= 0
+m >= 0
+-m+BLOCK-1 >= 0
+BLOCK-16 >= 0
+n >= 0
+-n+BLOCK-1 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-n'+BLOCK-1 >= 0
+n' >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 5 from S1 to S1; satisfied: 0, sat level: -1; Type: WAR
+on variable: rhs
+Dependence polyhedron
+Set #1
+[17 dims; 24 constraints]
+-m+m' = 0
+-k+k' = 0
+-j+j' = 0
+-i+i' = 0
+iter >= 0
+n' >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+nz-2 >= 0
+nz-10 >= 0
+j-1 >= 0
+-j+mz-2 >= 0
+mz-12 >= 0
+-k+q-2 >= 0
+k >= 0
+q-14 >= 0
+m >= 0
+-m+BLOCK-1 >= 0
+BLOCK-16 >= 0
+n >= 0
+-n+BLOCK-1 >= 0
+-iter+iter'-1 >= 0
+-iter'+ITERA-1 >= 0
+-n'+BLOCK-1 >= 0
+
+
+--- Dep 6 from S1 to S1; satisfied: 0, sat level: -1; Type: WAR
+on variable: rhs
+Dependence polyhedron
+Set #1
+[17 dims; 23 constraints]
+-m+m' = 0
+-k+k' = 0
+-j+j' = 0
+-i+i' = 0
+-iter+iter' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+nz-2 >= 0
+nz-10 >= 0
+j-1 >= 0
+-j+mz-2 >= 0
+mz-12 >= 0
+-k+q-2 >= 0
+k >= 0
+q-14 >= 0
+m >= 0
+-m+BLOCK-1 >= 0
+BLOCK-16 >= 0
+n >= 0
+-n'+BLOCK-1 >= 0
+-n+n'-1 >= 0
+
+
+--- Dep 7 from S1 to S1; satisfied: 0, sat level: -1; Type: WAW
+on variable: rhs
+Dependence polyhedron
+Set #1
+[17 dims; 24 constraints]
+-m+m' = 0
+-k+k' = 0
+-j+j' = 0
+-i+i' = 0
+iter >= 0
+n' >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+nz-2 >= 0
+nz-10 >= 0
+j-1 >= 0
+-j+mz-2 >= 0
+mz-12 >= 0
+-k+q-2 >= 0
+k >= 0
+q-14 >= 0
+m >= 0
+-m+BLOCK-1 >= 0
+BLOCK-16 >= 0
+n >= 0
+-n+BLOCK-1 >= 0
+-iter+iter'-1 >= 0
+-iter'+ITERA-1 >= 0
+-n'+BLOCK-1 >= 0
+
+
+--- Dep 8 from S1 to S1; satisfied: 0, sat level: -1; Type: WAW
+on variable: rhs
+Dependence polyhedron
+Set #1
+[17 dims; 23 constraints]
+-m+m' = 0
+-k+k' = 0
+-j+j' = 0
+-i+i' = 0
+-iter+iter' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+nz-2 >= 0
+nz-10 >= 0
+j-1 >= 0
+-j+mz-2 >= 0
+mz-12 >= 0
+-k+q-2 >= 0
+k >= 0
+q-14 >= 0
+m >= 0
+-m+BLOCK-1 >= 0
+BLOCK-16 >= 0
+n >= 0
+-n'+BLOCK-1 >= 0
+-n+n'-1 >= 0
+
+
+[pluto] WARNING: working with original (identity) transformation (if they exist)
+[zyj-debug] After affine transformations
+T(S1): (0, zT6+zT7, 0, zT7, 0, zT8, iter, 0, i, 0, j, 0, -k, 0, m, 0, n, 0)
+loop types (scalar, loop, scalar, loop, scalar, loop, loop, scalar, loop, scalar, loop, scalar, loop, scalar, loop, scalar, loop, scalar)
+
+t1 --> parallel scalar (band 0)no-ujam
+t2 --> fwd_dep  loop   (band 0)no-ujam
+t3 --> parallel scalar (band 0)no-ujam
+t4 --> parallel loop   (band 0)no-ujam
+t5 --> parallel scalar (band 0)no-ujam
+t6 --> parallel loop   (band 0)no-ujam
+t7 --> fwd_dep  loop   (band 0)no-ujam
+t8 --> parallel scalar (band 0)no-ujam
+t9 --> parallel loop   (band 0)no-ujam
+t10 --> parallel scalar (band 0)no-ujam
+t11 --> parallel loop   (band 0)no-ujam
+t12 --> parallel scalar (band 0)no-ujam
+t13 --> fwd_dep  loop   (band 1)no-ujam
+t14 --> parallel scalar (band 1)no-ujam
+t15 --> parallel loop   (band 2)no-ujam
+t16 --> parallel scalar (band 2)no-ujam
+t17 --> fwd_dep  loop   (band 2)no-ujam
+t18 --> parallel scalar (band 2)no-ujam
+
+Warning: parallel poly loop not found in AST

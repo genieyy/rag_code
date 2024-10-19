@@ -1,0 +1,200 @@
+param_name: ITERATIONS
+param_val: 10000
+
+param_name: num_topics
+param_val: 400
+
+param_name: length
+param_val: 600
+
+CONTEXT
+3 5 0 0 0 3
+# e/i| P1   P2   P3 |  1  
+   1    1    0    0 -10000    ## P1-10000 >= 0
+   1    0    1    0 -400    ## P2-400 >= 0
+   1    0    0    1 -600    ## P3-600 >= 0
+[zyj-debug] Before affine transformations
+S1 "var_gamma[k] = alpha + (total / ((double)num_topics));"
+ndims: 2; orig_depth: 2
+iterators: iter, k
+Index set
+Set #1
+[5 dims; 6 constraints]
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-1 >= 0
+k >= 0
+-k+num_t-1 >= 0
+num_t-1 >= 0
+
+T(S1): (0, iter, 0, k, 0, 0, 0)
+loop types (loop, loop, loop, loop, loop, scalar, scalar)
+
+Read accesses
+alpha[0]
+total[0]
+num_topics[0]
+Write accesses
+var_gamma[k]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+
+S2 "digamma_gam[k] = var_gamma[k];"
+ndims: 2; orig_depth: 2
+iterators: iter, k
+Index set
+Set #1
+[5 dims; 6 constraints]
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-1 >= 0
+k >= 0
+-k+num_t-1 >= 0
+num_t-1 >= 0
+
+T(S2): (0, iter, 0, k, 1, 0, 0)
+loop types (loop, loop, loop, loop, loop, scalar, scalar)
+
+Read accesses
+var_gamma[k]
+Write accesses
+digamma_gam[k]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+
+S3 "phi[n][k] = 1.0 / num_topics;"
+ndims: 3; orig_depth: 3
+iterators: iter, k, n
+Index set
+Set #1
+[6 dims; 9 constraints]
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-1 >= 0
+k >= 0
+-k+num_t-1 >= 0
+num_t-1 >= 0
+n >= 0
+-n+lengt-1 >= 0
+lengt-1 >= 0
+
+T(S3): (0, iter, 0, k, 2, n, 0)
+loop types (loop, loop, loop, loop, loop, loop, loop)
+
+Read accesses
+num_topics[0]
+Write accesses
+phi[n][k]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+Original loop: 2 -> yes
+
+--- Dep 1 from S1 to S2; satisfied: 0, sat level: -1; Type: RAW
+on variable: var_gamma
+Dependence polyhedron
+Set #1
+[7 dims; 9 constraints]
+-k+k' = 0
+iter >= 0
+-iter'+ITERA-1 >= 0
+ITERA-10000 >= 0
+k >= 0
+-k+num_t-1 >= 0
+num_t-400 >= 0
+lengt-600 >= 0
+-iter+iter' >= 0
+
+
+--- Dep 2 from S2 to S1; satisfied: 0, sat level: -1; Type: WAR
+on variable: var_gamma
+Dependence polyhedron
+Set #1
+[7 dims; 11 constraints]
+-k+k' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+k >= 0
+-k+num_t-1 >= 0
+num_t-400 >= 0
+lengt-600 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 3 from S3 to S3; satisfied: 0, sat level: -1; Type: WAW
+on variable: phi
+Dependence polyhedron
+Set #1
+[9 dims; 14 constraints]
+-n+n' = 0
+-k+k' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+k >= 0
+-k+num_t-1 >= 0
+num_t-400 >= 0
+n >= 0
+-n+lengt-1 >= 0
+lengt-600 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 4 from S1 to S1; satisfied: 0, sat level: -1; Type: WAW
+on variable: var_gamma
+Dependence polyhedron
+Set #1
+[7 dims; 11 constraints]
+-k+k' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+k >= 0
+-k+num_t-1 >= 0
+num_t-400 >= 0
+lengt-600 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 5 from S2 to S2; satisfied: 0, sat level: -1; Type: WAW
+on variable: digamma_gam
+Dependence polyhedron
+Set #1
+[7 dims; 11 constraints]
+-k+k' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+k >= 0
+-k+num_t-1 >= 0
+num_t-400 >= 0
+lengt-600 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+[zyj-debug] After affine transformations
+T(S1): (zT2, zT3, 0, iter, k, 0, 1)
+loop types (loop, loop, scalar, loop, loop, scalar, scalar)
+
+T(S2): (zT2, zT3, 0, iter, k, 0, 2)
+loop types (loop, loop, scalar, loop, loop, scalar, scalar)
+
+T(S3): (zT3, zT4, zT5, iter, k, n, 0)
+loop types (loop, loop, loop, loop, loop, loop, scalar)
+
+t1 --> parallel loop   (band 0)no-ujam
+t2 --> fwd_dep  loop   (band 0)no-ujam
+t3 --> parallel loop   (band 0)no-ujam
+t4 --> fwd_dep  loop   (band 0)no-ujam
+t5 --> parallel loop   (band 0)no-ujam
+t6 --> parallel loop   (band 0)no-ujam
+t7 --> fwd_dep  scalar (band 1)no-ujam
+

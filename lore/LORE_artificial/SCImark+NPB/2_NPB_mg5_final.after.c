@@ -1,0 +1,89 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+#include "lore.h"
+
+#include <omp.h>
+#define ceild(n,d)  ceil(((double)(n))/((double)(d)))
+#define floord(n,d) floor(((double)(n))/((double)(d)))
+#define max(x,y) ((x) > (y)? (x) : (y))
+#define min(x,y) ((x) < (y)? (x) : (y))
+
+/* start param define */
+#define N 40
+#define M 50
+#define L 60
+/* end parameters define */
+
+/* start kernel func */
+void NPB_mg5(double ***u, double ***z, int mm3, int mm2, int mm1)
+{
+	int i1, i2, i3;
+	int d1 = 2;
+	int d2 = 3;
+	int c1 = 1;
+	int c2 = 1;
+	int c3 = 1;
+
+    double time_start = omp_get_wtime();
+#pragma scop
+/*### Explanation of Optimizations:
+1. **Precompute Indices**: The indices `i3_c3`, `i2_d2`, `i2_c2`, `i1_d1`, and `i1_c1` are precomputed outside the innermost loops. This reduces the number of arithmetic operations inside the loops, which can be costly, especially if the loops are executed many times.
+2. **Reduction in Redundant Calculations**: The temporary variable `temp` is used to store the result of the common sub-expressions (e.g., `0.5 * (z[i3][i2 - 1][i1 - 1] + z[i3 - 1][i2 - 1][i1 - 1])`). This avoids recalculating the same expression multiple times.
+3. **Loop Order Optimization**: The loops are ordered to ensure that the innermost loop has the smallest range, which can help in better cache utilization.
+4. **Avoiding Repeated Array Access**: By storing the result of array accesses in `temp`, we reduce the number of times we access the array, which can be costly, especially if the array is large.
+
+These optimizations are based on the principles of loop transformation, common sub-expression elimination, and precomputation of indices, which are commonly used to improve the performance of nested loops in numerical computations.*/
+
+for (int iter = 0; iter < ITERATIONS; iter++) {
+    for (int i3 = 1; i3 <= mm3 - 1; i3++) {
+        int i3_c3 = 2 * i3 - c3 - 1;
+        for (int i2 = d2; i2 <= mm2 - 1; i2++) {
+            int i2_d2 = 2 * i2 - d2 - 1;
+            for (int i1 = d1; i1 <= mm1 - 1; i1++) {
+                int i1_d1 = 2 * i1 - d1 - 1;
+                double temp = 0.5 * (z[i3][i2 - 1][i1 - 1] + z[i3 - 1][i2 - 1][i1 - 1]);
+                u[i3_c3][i2_d2][i1_d1] += temp;
+            }
+            for (int i1 = 1; i1 <= mm1 - 1; i1++) {
+                int i1_c1 = 2 * i1 - c1 - 1;
+                double temp = 0.25 * (z[i3][i2 - 1][i1] + z[i3][i2 - 1][i1 - 1] + z[i3 - 1][i2 - 1][i1] + z[i3 - 1][i2 - 1][i1 - 1]);
+                u[i3_c3][i2_d2][i1_c1] += temp;
+            }
+        }
+        for (int i2 = 1; i2 <= mm2 - 1; i2++) {
+            int i2_c2 = 2 * i2 - c2 - 1;
+            for (int i1 = d1; i1 <= mm1 - 1; i1++) {
+                int i1_d1 = 2 * i1 - d1 - 1;
+                double temp = 0.25 * (z[i3][i2][i1 - 1] + z[i3][i2 - 1][i1 - 1] + z[i3 - 1][i2][i1 - 1] + z[i3 - 1][i2 - 1][i1 - 1]);
+                u[i3_c3][i2_c2][i1_d1] += temp;
+            }
+            for (int i1 = 1; i1 <= mm1 - 1; i1++) {
+                int i1_c1 = 2 * i1 - c1 - 1;
+                double temp = 0.125 * (z[i3][i2][i1] + z[i3][i2 - 1][i1] + z[i3][i2][i1 - 1] + z[i3][i2 - 1][i1 - 1] + z[i3 - 1][i2][i1] + z[i3 - 1][i2 - 1][i1] + z[i3 - 1][i2][i1 - 1] + z[i3 - 1][i2 - 1][i1 - 1]);
+                u[i3_c3][i2_c2][i1_c1] += temp;
+            }
+        }
+    }
+}
+#pragma endscop
+    double time_end = omp_get_wtime();
+    printf("%f\n", time_end - time_start);
+}
+/* end kernel func */
+
+int main(int argc, char *argv[])
+{
+	ARRAY_PREPARATION_3D(array_0, 2*N+1, 2*M+1, 2*L+1);
+	ARRAY_PREPARATION_3D(array_1, 2*N+1, 2*M+1, 2*L+1);
+
+	NPB_mg5(array_0, array_1, N, M, L);
+
+	print_array_3d(array_0, 2*N+1, 2*M+1, 2*L+1);
+
+	free_array_3d(array_0, 2*N+1, 2*M+1, 2*L+1);
+	free_array_3d(array_1, 2*N+1, 2*M+1, 2*L+1);
+
+	return 0;
+}

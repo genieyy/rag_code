@@ -5,8 +5,8 @@ draw.py
 __pycache__
 .conda
 .vscode
-data/pluto_code/*
+# data/pluto_code/*
 data/raw_data/*
-*.after.c
+# *.after.c
 *.out
 *.checksum

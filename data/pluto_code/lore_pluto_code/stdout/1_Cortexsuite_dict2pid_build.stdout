@@ -1,0 +1,187 @@
+param_name: ITERATIONS
+param_val: 10000
+
+param_name: n_ciphone
+param_val: 40
+
+CONTEXT
+2 4 0 0 0 2
+# e/i| P1   P2 |  1  
+   1    1    0 -10000    ## P1-10000 >= 0
+   1    0    1  -40    ## P2-40 >= 0
+[zyj-debug] Before affine transformations
+S1 "ldiph_lc[b][r][l] = bad_s3ssid;"
+ndims: 4; orig_depth: 4
+iterators: iter, b, r, l
+Index set
+Set #1
+[6 dims; 10 constraints]
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-1 >= 0
+b >= 0
+-b+n_cip-1 >= 0
+n_cip-1 >= 0
+r >= 0
+-r+n_cip-1 >= 0
+l >= 0
+-l+n_cip-1 >= 0
+
+T(S1): (0, iter, 0, b, 0, r, 0, l, 0)
+loop types (loop, loop, loop, loop, loop, loop, loop, loop, loop)
+
+Read accesses
+bad_s3ssid[0]
+Write accesses
+ldiph_lc[b][r][l]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+Original loop: 2 -> yes
+Original loop: 3 -> yes
+
+S2 "lrdiph_rc[b][l][r] = bad_s3ssid;"
+ndims: 4; orig_depth: 4
+iterators: iter, b, r, l
+Index set
+Set #1
+[6 dims; 10 constraints]
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-1 >= 0
+b >= 0
+-b+n_cip-1 >= 0
+n_cip-1 >= 0
+r >= 0
+-r+n_cip-1 >= 0
+l >= 0
+-l+n_cip-1 >= 0
+
+T(S2): (0, iter, 0, b, 0, r, 0, l, 1)
+loop types (loop, loop, loop, loop, loop, loop, loop, loop, loop)
+
+Read accesses
+bad_s3ssid[0]
+Write accesses
+lrdiph_rc[b][l][r]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+Original loop: 2 -> yes
+Original loop: 3 -> yes
+
+S3 "rdiph_rc[b][l][r] = bad_s3ssid;"
+ndims: 4; orig_depth: 4
+iterators: iter, b, r, l
+Index set
+Set #1
+[6 dims; 10 constraints]
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-1 >= 0
+b >= 0
+-b+n_cip-1 >= 0
+n_cip-1 >= 0
+r >= 0
+-r+n_cip-1 >= 0
+l >= 0
+-l+n_cip-1 >= 0
+
+T(S3): (0, iter, 0, b, 0, r, 0, l, 2)
+loop types (loop, loop, loop, loop, loop, loop, loop, loop, loop)
+
+Read accesses
+bad_s3ssid[0]
+Write accesses
+rdiph_rc[b][l][r]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+Original loop: 2 -> yes
+Original loop: 3 -> yes
+
+--- Dep 1 from S3 to S3; satisfied: 0, sat level: -1; Type: WAW
+on variable: rdiph_rc
+Dependence polyhedron
+Set #1
+[10 dims; 16 constraints]
+-l+l' = 0
+-r+r' = 0
+-b+b' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+b >= 0
+-b+n_cip-1 >= 0
+n_cip-40 >= 0
+r >= 0
+-r+n_cip-1 >= 0
+l >= 0
+-l+n_cip-1 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 2 from S1 to S1; satisfied: 0, sat level: -1; Type: WAW
+on variable: ldiph_lc
+Dependence polyhedron
+Set #1
+[10 dims; 16 constraints]
+-l+l' = 0
+-r+r' = 0
+-b+b' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+b >= 0
+-b+n_cip-1 >= 0
+n_cip-40 >= 0
+r >= 0
+-r+n_cip-1 >= 0
+l >= 0
+-l+n_cip-1 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 3 from S2 to S2; satisfied: 0, sat level: -1; Type: WAW
+on variable: lrdiph_rc
+Dependence polyhedron
+Set #1
+[10 dims; 16 constraints]
+-l+l' = 0
+-r+r' = 0
+-b+b' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+b >= 0
+-b+n_cip-1 >= 0
+n_cip-40 >= 0
+r >= 0
+-r+n_cip-1 >= 0
+l >= 0
+-l+n_cip-1 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+[zyj-debug] After affine transformations
+T(S1): (zT4, zT5, zT6, zT7, b, r, l, iter)
+loop types (loop, loop, loop, loop, loop, loop, loop, loop)
+
+T(S2): (zT4, zT5, zT6, zT7, b, r, l, iter)
+loop types (loop, loop, loop, loop, loop, loop, loop, loop)
+
+T(S3): (zT4, zT5, zT6, zT7, b, r, l, iter)
+loop types (loop, loop, loop, loop, loop, loop, loop, loop)
+
+t1 --> parallel loop   (band 0)no-ujam
+t2 --> parallel loop   (band 0)no-ujam
+t3 --> parallel loop   (band 0)no-ujam
+t4 --> fwd_dep  loop   (band 0)no-ujam
+t5 --> parallel loop   (band 0)no-ujam
+t6 --> parallel loop   (band 0)no-ujam
+t7 --> parallel loop   (band 0)no-ujam
+t8 --> fwd_dep  loop   (band 0)no-ujam
+

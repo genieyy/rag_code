@@ -1,0 +1,572 @@
+param_name: ITERATIONS
+param_val: 10000
+
+param_name: n
+param_val: 40
+
+param_name: m
+param_val: 60
+
+CONTEXT
+3 5 0 0 0 3
+# e/i| P1   P2   P3 |  1  
+   1    1    0    0 -10000    ## P1-10000 >= 0
+   1    0    1    0  -40    ## P2-40 >= 0
+   1    0    0    1  -60    ## P3-60 >= 0
+[zyj-debug] Before affine transformations
+S1 "interm[j] = data[i][j];"
+ndims: 3; orig_depth: 3
+iterators: iter, i, j
+Index set
+Set #1
+[6 dims; 9 constraints]
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-1 >= 0
+i-1 >= 0
+-i+n >= 0
+n-1 >= 0
+j-1 >= 0
+-j+m >= 0
+m-1 >= 0
+
+T(S1): (0, iter, 0, i, 0, j, 0, 0, 0)
+loop types (loop, loop, loop, loop, loop, loop, loop, scalar, scalar)
+
+Read accesses
+data[i][j]
+Write accesses
+interm[j]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+Original loop: 2 -> yes
+
+S2 "data[i][k] = 0.0;"
+ndims: 3; orig_depth: 3
+iterators: iter, i, k
+Index set
+Set #1
+[6 dims; 9 constraints]
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-1 >= 0
+i-1 >= 0
+-i+n >= 0
+n-1 >= 0
+k-1 >= 0
+-k+m >= 0
+m-1 >= 0
+
+T(S2): (0, iter, 0, i, 1, k, 0, 0, 0)
+loop types (loop, loop, loop, loop, loop, loop, loop, scalar, scalar)
+
+No Read accesses
+Write accesses
+data[i][k]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+Original loop: 2 -> yes
+
+S3 "data[i][k] += interm[k2] * symmat[k2][m - k + 1];"
+ndims: 4; orig_depth: 4
+iterators: iter, i, k, k2
+Index set
+Set #1
+[7 dims; 11 constraints]
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-1 >= 0
+i-1 >= 0
+-i+n >= 0
+n-1 >= 0
+k-1 >= 0
+-k+m >= 0
+m-1 >= 0
+k2-1 >= 0
+-k2+m >= 0
+
+T(S3): (0, iter, 0, i, 1, k, 1, k2, 0)
+loop types (loop, loop, loop, loop, loop, loop, loop, loop, loop)
+
+Read accesses
+data[i][k]
+interm[k2]
+symmat[k2][-k+m+1]
+Write accesses
+data[i][k]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+Original loop: 2 -> yes
+Original loop: 3 -> yes
+
+--- Dep 1 from S1 to S3; satisfied: 0, sat level: -1; Type: RAW
+on variable: interm
+Dependence polyhedron
+Set #1
+[10 dims; 15 constraints]
+-j+k2' = 0
+iter >= 0
+k'-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+n >= 0
+n-40 >= 0
+j-1 >= 0
+-j+m >= 0
+m-60 >= 0
+-iter+iter'-1 >= 0
+-iter'+ITERA-1 >= 0
+-k'+m >= 0
+i'-1 >= 0
+-i'+n >= 0
+
+
+--- Dep 2 from S1 to S3; satisfied: 0, sat level: -1; Type: RAW
+on variable: interm
+Dependence polyhedron
+Set #1
+[10 dims; 14 constraints]
+-j+k2' = 0
+-iter+iter' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i'+n >= 0
+n-40 >= 0
+j-1 >= 0
+-j+m >= 0
+m-60 >= 0
+-i+i' >= 0
+k'-1 >= 0
+-k'+m >= 0
+
+
+--- Dep 3 from S3 to S1; satisfied: 0, sat level: -1; Type: RAW
+on variable: data
+Dependence polyhedron
+Set #1
+[10 dims; 16 constraints]
+-k+j' = 0
+-i+i' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+n >= 0
+n-40 >= 0
+k-1 >= 0
+-k+m >= 0
+m-60 >= 0
+k2-1 >= 0
+-k2+m >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 4 from S2 to S3; satisfied: 0, sat level: -1; Type: RAW
+on variable: data
+Dependence polyhedron
+Set #1
+[10 dims; 14 constraints]
+-k+k' = 0
+-i+i' = 0
+iter >= 0
+k2'-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+n >= 0
+n-40 >= 0
+k-1 >= 0
+-k+m >= 0
+m-60 >= 0
+-iter+iter' >= 0
+-iter'+ITERA-1 >= 0
+-k2'+m >= 0
+
+
+--- Dep 5 from S3 to S3; satisfied: 0, sat level: -1; Type: RAW
+on variable: data
+Dependence polyhedron
+Set #1
+[11 dims; 16 constraints]
+-k+k' = 0
+-i+i' = 0
+iter >= 0
+k2'-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+n >= 0
+n-40 >= 0
+k-1 >= 0
+-k+m >= 0
+m-60 >= 0
+k2-1 >= 0
+-k2+m >= 0
+-iter+iter'-1 >= 0
+-iter'+ITERA-1 >= 0
+-k2'+m >= 0
+
+
+--- Dep 6 from S3 to S3; satisfied: 0, sat level: -1; Type: RAW
+on variable: data
+Dependence polyhedron
+Set #1
+[11 dims; 15 constraints]
+-k+k' = 0
+-i+i' = 0
+-iter+iter' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+n >= 0
+n-40 >= 0
+k-1 >= 0
+-k+m >= 0
+m-60 >= 0
+k2-1 >= 0
+-k2'+m >= 0
+-k2+k2'-1 >= 0
+
+
+--- Dep 7 from S2 to S1; satisfied: 0, sat level: -1; Type: RAW
+on variable: data
+Dependence polyhedron
+Set #1
+[9 dims; 14 constraints]
+-k+j' = 0
+-i+i' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+n >= 0
+n-40 >= 0
+k-1 >= 0
+-k+m >= 0
+m-60 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 8 from S3 to S2; satisfied: 0, sat level: -1; Type: WAR
+on variable: data
+Dependence polyhedron
+Set #1
+[10 dims; 16 constraints]
+-k+k' = 0
+-i+i' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+n >= 0
+n-40 >= 0
+k-1 >= 0
+-k+m >= 0
+m-60 >= 0
+k2-1 >= 0
+-k2+m >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 9 from S3 to S1; satisfied: 0, sat level: -1; Type: WAR
+on variable: interm
+Dependence polyhedron
+Set #1
+[10 dims; 15 constraints]
+-k2+j' = 0
+iter >= 0
+i'-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+n >= 0
+n-40 >= 0
+k-1 >= 0
+-k+m >= 0
+m-60 >= 0
+k2-1 >= 0
+-k2+m >= 0
+-iter+iter'-1 >= 0
+-iter'+ITERA-1 >= 0
+-i'+n >= 0
+
+
+--- Dep 10 from S3 to S1; satisfied: 0, sat level: -1; Type: WAR
+on variable: interm
+Dependence polyhedron
+Set #1
+[10 dims; 14 constraints]
+-k2+j' = 0
+-iter+iter' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i'+n >= 0
+n-40 >= 0
+k-1 >= 0
+-k+m >= 0
+m-60 >= 0
+k2-1 >= 0
+-k2+m >= 0
+-i+i'-1 >= 0
+
+
+--- Dep 11 from S1 to S3; satisfied: 0, sat level: -1; Type: WAR
+on variable: data
+Dependence polyhedron
+Set #1
+[10 dims; 14 constraints]
+-j+k' = 0
+-i+i' = 0
+iter >= 0
+k2'-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+n >= 0
+n-40 >= 0
+j-1 >= 0
+-j+m >= 0
+m-60 >= 0
+-iter+iter' >= 0
+-iter'+ITERA-1 >= 0
+-k2'+m >= 0
+
+
+--- Dep 12 from S3 to S3; satisfied: 0, sat level: -1; Type: WAR
+on variable: data
+Dependence polyhedron
+Set #1
+[11 dims; 16 constraints]
+-k+k' = 0
+-i+i' = 0
+iter >= 0
+k2'-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+n >= 0
+n-40 >= 0
+k-1 >= 0
+-k+m >= 0
+m-60 >= 0
+k2-1 >= 0
+-k2+m >= 0
+-iter+iter'-1 >= 0
+-iter'+ITERA-1 >= 0
+-k2'+m >= 0
+
+
+--- Dep 13 from S3 to S3; satisfied: 0, sat level: -1; Type: WAR
+on variable: data
+Dependence polyhedron
+Set #1
+[11 dims; 15 constraints]
+-k+k' = 0
+-i+i' = 0
+-iter+iter' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+n >= 0
+n-40 >= 0
+k-1 >= 0
+-k+m >= 0
+m-60 >= 0
+k2-1 >= 0
+-k2'+m >= 0
+-k2+k2'-1 >= 0
+
+
+--- Dep 14 from S1 to S2; satisfied: 0, sat level: -1; Type: WAR
+on variable: data
+Dependence polyhedron
+Set #1
+[9 dims; 12 constraints]
+-j+k' = 0
+-i+i' = 0
+iter >= 0
+-iter'+ITERA-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+n >= 0
+n-40 >= 0
+j-1 >= 0
+-j+m >= 0
+m-60 >= 0
+-iter+iter' >= 0
+
+
+--- Dep 15 from S2 to S3; satisfied: 0, sat level: -1; Type: WAW
+on variable: data
+Dependence polyhedron
+Set #1
+[10 dims; 14 constraints]
+-k+k' = 0
+-i+i' = 0
+iter >= 0
+k2'-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+n >= 0
+n-40 >= 0
+k-1 >= 0
+-k+m >= 0
+m-60 >= 0
+-iter+iter' >= 0
+-iter'+ITERA-1 >= 0
+-k2'+m >= 0
+
+
+--- Dep 16 from S1 to S1; satisfied: 0, sat level: -1; Type: WAW
+on variable: interm
+Dependence polyhedron
+Set #1
+[9 dims; 13 constraints]
+-j+j' = 0
+iter >= 0
+i'-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+n >= 0
+n-40 >= 0
+j-1 >= 0
+-j+m >= 0
+m-60 >= 0
+-iter+iter'-1 >= 0
+-iter'+ITERA-1 >= 0
+-i'+n >= 0
+
+
+--- Dep 17 from S1 to S1; satisfied: 0, sat level: -1; Type: WAW
+on variable: interm
+Dependence polyhedron
+Set #1
+[9 dims; 12 constraints]
+-j+j' = 0
+-iter+iter' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i'+n >= 0
+n-40 >= 0
+j-1 >= 0
+-j+m >= 0
+m-60 >= 0
+-i+i'-1 >= 0
+
+
+--- Dep 18 from S3 to S2; satisfied: 0, sat level: -1; Type: WAW
+on variable: data
+Dependence polyhedron
+Set #1
+[10 dims; 16 constraints]
+-k+k' = 0
+-i+i' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+n >= 0
+n-40 >= 0
+k-1 >= 0
+-k+m >= 0
+m-60 >= 0
+k2-1 >= 0
+-k2+m >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 19 from S2 to S2; satisfied: 0, sat level: -1; Type: WAW
+on variable: data
+Dependence polyhedron
+Set #1
+[9 dims; 14 constraints]
+-k+k' = 0
+-i+i' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+n >= 0
+n-40 >= 0
+k-1 >= 0
+-k+m >= 0
+m-60 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 20 from S3 to S3; satisfied: 0, sat level: -1; Type: WAW
+on variable: data
+Dependence polyhedron
+Set #1
+[11 dims; 16 constraints]
+-k+k' = 0
+-i+i' = 0
+iter >= 0
+k2'-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+n >= 0
+n-40 >= 0
+k-1 >= 0
+-k+m >= 0
+m-60 >= 0
+k2-1 >= 0
+-k2+m >= 0
+-iter+iter'-1 >= 0
+-iter'+ITERA-1 >= 0
+-k2'+m >= 0
+
+
+--- Dep 21 from S3 to S3; satisfied: 0, sat level: -1; Type: WAW
+on variable: data
+Dependence polyhedron
+Set #1
+[11 dims; 15 constraints]
+-k+k' = 0
+-i+i' = 0
+-iter+iter' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i-1 >= 0
+-i+n >= 0
+n-40 >= 0
+k-1 >= 0
+-k+m >= 0
+m-60 >= 0
+k2-1 >= 0
+-k2'+m >= 0
+-k2+k2'-1 >= 0
+
+
+[zyj-debug] After affine transformations
+T(S1): (iter, i, zT3, 0, j, 0, 1)
+loop types (loop, loop, loop, scalar, loop, scalar, scalar)
+
+T(S2): (iter, i, zT3, 0, k, 0, 2)
+loop types (loop, loop, loop, scalar, loop, scalar, scalar)
+
+T(S3): (iter, i, zT4, zT5, k+k2, k2, 0)
+loop types (loop, loop, loop, loop, loop, loop, scalar)
+
+t1 --> serial   loop   (band 0)no-ujam
+t2 --> serial   loop   (band 1)no-ujam
+t3 --> fwd_dep  loop   (band 2)no-ujam
+t4 --> fwd_dep  loop   (band 2)no-ujam
+t5 --> fwd_dep  loop   (band 2)no-ujam
+t6 --> parallel loop   (band 2)no-ujam
+t7 --> fwd_dep  scalar (band 3)no-ujam
+

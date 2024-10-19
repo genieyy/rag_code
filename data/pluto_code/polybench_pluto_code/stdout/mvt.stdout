@@ -1,0 +1,164 @@
+param_name: _PB_N
+param_val: 2000
+
+CONTEXT
+1 3 0 0 0 1
+# e/i| P1 |  1  
+   1    1 -2000    ## P1-2000 >= 0
+[zyj-debug] Before affine transformations
+S1 "x1[i] = x1[i] + A[i][j] * y_1[j];"
+ndims: 2; orig_depth: 2
+iterators: i, j
+Index set
+Set #1
+[3 dims; 5 constraints]
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-1 >= 0
+j >= 0
+-j+_PB_N-1 >= 0
+
+T(S1): (0, i, 0, j, 0)
+loop types (loop, loop, loop, loop, loop)
+
+Read accesses
+x1[i]
+A[i][j]
+y_1[j]
+Write accesses
+x1[i]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+
+S2 "x2[i] = x2[i] + A[j][i] * y_2[j];"
+ndims: 2; orig_depth: 2
+iterators: i, j
+Index set
+Set #1
+[3 dims; 5 constraints]
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-1 >= 0
+j >= 0
+-j+_PB_N-1 >= 0
+
+T(S2): (1, i, 0, j, 0)
+loop types (loop, loop, loop, loop, loop)
+
+Read accesses
+x2[i]
+A[j][i]
+y_2[j]
+Write accesses
+x2[i]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+
+--- Dep 1 from S2 to S2; satisfied: 0, sat level: -1; Type: RAW
+on variable: x2
+Dependence polyhedron
+Set #1
+[5 dims; 9 constraints]
+-i+i' = 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-2000 >= 0
+j >= 0
+-j+_PB_N-1 >= 0
+-j'+_PB_N-1 >= 0
+j' >= 0
+-j+j'-1 >= 0
+
+
+--- Dep 2 from S1 to S1; satisfied: 0, sat level: -1; Type: RAW
+on variable: x1
+Dependence polyhedron
+Set #1
+[5 dims; 9 constraints]
+-i+i' = 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-2000 >= 0
+j >= 0
+-j+_PB_N-1 >= 0
+-j'+_PB_N-1 >= 0
+j' >= 0
+-j+j'-1 >= 0
+
+
+--- Dep 3 from S2 to S2; satisfied: 0, sat level: -1; Type: WAR
+on variable: x2
+Dependence polyhedron
+Set #1
+[5 dims; 9 constraints]
+-i+i' = 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-2000 >= 0
+j >= 0
+-j+_PB_N-1 >= 0
+-j'+_PB_N-1 >= 0
+j' >= 0
+-j+j'-1 >= 0
+
+
+--- Dep 4 from S1 to S1; satisfied: 0, sat level: -1; Type: WAR
+on variable: x1
+Dependence polyhedron
+Set #1
+[5 dims; 9 constraints]
+-i+i' = 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-2000 >= 0
+j >= 0
+-j+_PB_N-1 >= 0
+-j'+_PB_N-1 >= 0
+j' >= 0
+-j+j'-1 >= 0
+
+
+--- Dep 5 from S2 to S2; satisfied: 0, sat level: -1; Type: WAW
+on variable: x2
+Dependence polyhedron
+Set #1
+[5 dims; 9 constraints]
+-i+i' = 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-2000 >= 0
+j >= 0
+-j+_PB_N-1 >= 0
+-j'+_PB_N-1 >= 0
+j' >= 0
+-j+j'-1 >= 0
+
+
+--- Dep 6 from S1 to S1; satisfied: 0, sat level: -1; Type: WAW
+on variable: x1
+Dependence polyhedron
+Set #1
+[5 dims; 9 constraints]
+-i+i' = 0
+i >= 0
+-i+_PB_N-1 >= 0
+_PB_N-2000 >= 0
+j >= 0
+-j+_PB_N-1 >= 0
+-j'+_PB_N-1 >= 0
+j' >= 0
+-j+j'-1 >= 0
+
+
+[zyj-debug] After affine transformations
+T(S1): (zT2, zT3, i, j)
+loop types (loop, loop, loop, loop)
+
+T(S2): (zT2, zT3, i, j)
+loop types (loop, loop, loop, loop)
+
+t1 --> parallel loop   (band 0)no-ujam
+t2 --> fwd_dep  loop   (band 0)no-ujam
+t3 --> parallel loop   (band 0)no-ujam
+t4 --> fwd_dep  loop   (band 0)no-ujam
+

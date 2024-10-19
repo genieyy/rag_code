@@ -1,0 +1,118 @@
+param_name: ITERATIONS
+param_val: 10000
+
+param_name: row_dim
+param_val: 600
+
+param_name: col_dim
+param_val: 400
+
+CONTEXT
+3 5 0 0 0 3
+# e/i| P1   P2   P3 |  1  
+   1    1    0    0 -10000    ## P1-10000 >= 0
+   1    0    1    0 -600    ## P2-600 >= 0
+   1    0    0    1 -400    ## P3-400 >= 0
+[zyj-debug] Before affine transformations
+S1 "A[j][i] += B[j][i];"
+ndims: 3; orig_depth: 3
+iterators: iter, i, j
+Index set
+Set #1
+[6 dims; 9 constraints]
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-1 >= 0
+i >= 0
+-i+row_d-1 >= 0
+row_d-1 >= 0
+j >= 0
+-j+col_d-1 >= 0
+col_d-1 >= 0
+
+T(S1): (0, iter, 0, i, 0, j, 0)
+loop types (loop, loop, loop, loop, loop, loop, loop)
+
+Read accesses
+A[j][i]
+B[j][i]
+Write accesses
+A[j][i]
+Original loop: 0 -> yes
+Original loop: 1 -> yes
+Original loop: 2 -> yes
+
+--- Dep 1 from S1 to S1; satisfied: 0, sat level: -1; Type: RAW
+on variable: A
+Dependence polyhedron
+Set #1
+[9 dims; 14 constraints]
+-j+j' = 0
+-i+i' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i >= 0
+-i+row_d-1 >= 0
+row_d-600 >= 0
+j >= 0
+-j+col_d-1 >= 0
+col_d-400 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 2 from S1 to S1; satisfied: 0, sat level: -1; Type: WAR
+on variable: A
+Dependence polyhedron
+Set #1
+[9 dims; 14 constraints]
+-j+j' = 0
+-i+i' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i >= 0
+-i+row_d-1 >= 0
+row_d-600 >= 0
+j >= 0
+-j+col_d-1 >= 0
+col_d-400 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+--- Dep 3 from S1 to S1; satisfied: 0, sat level: -1; Type: WAW
+on variable: A
+Dependence polyhedron
+Set #1
+[9 dims; 14 constraints]
+-j+j' = 0
+-i+i' = 0
+iter >= 0
+-iter+ITERA-1 >= 0
+ITERA-10000 >= 0
+i >= 0
+-i+row_d-1 >= 0
+row_d-600 >= 0
+j >= 0
+-j+col_d-1 >= 0
+col_d-400 >= 0
+iter' >= 0
+-iter'+ITERA-1 >= 0
+-iter+iter'-1 >= 0
+
+
+[zyj-debug] After affine transformations
+T(S1): (zT3, zT4, zT5, j, iter, i)
+loop types (loop, loop, loop, loop, loop, loop)
+
+t1 --> parallel loop   (band 0)no-ujam
+t2 --> parallel loop   (band 0)no-ujam
+t3 --> fwd_dep  loop   (band 0)no-ujam
+t4 --> parallel loop   (band 0)no-ujam
+t5 --> fwd_dep  loop   (band 0)no-ujam
+t6 --> parallel loop   (band 0)no-ujam
+

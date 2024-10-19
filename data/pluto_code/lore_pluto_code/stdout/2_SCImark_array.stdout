@@ -1,0 +1,15 @@
+param_name: ITERATIONS
+param_val: 10000
+
+param_name: m
+param_val: 400
+
+param_name: n
+param_val: 600
+
+CONTEXT
+3 6 0 0 0 4
+# e/i| P1   P2   P3   P4 |  1  
+   1    1    0    0    0 -10000    ## P1-10000 >= 0
+   1    0    1    0    0 -400    ## P2-400 >= 0
+   1    0    0    0    1 -600    ## P4-600 >= 0
