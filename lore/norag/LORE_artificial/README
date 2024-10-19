@@ -1,0 +1,19 @@
+files:
+
+  see benchmark_list, with lore.c and lore.h
+
+compile command:
+
+  gcc -O3 -fopenmp -ffast-math -I . ./lore.c ./ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc.check.c -lm -DLORE_CHECKSUM_ARRAYS -o ./ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc.check.out
+
+  checksum output in stderr: -DLORE_CHECKSUM_ARRAYS
+  elements output in stderr: -DLORE_DUMP_ARRAYS
+  time output in stdout: (default)
+
+execute command:
+
+  ./ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc.check.out
+
+output_example:
+
+  see output.jsonl

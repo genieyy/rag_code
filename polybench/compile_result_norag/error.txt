@@ -1,0 +1,78 @@
+i,basename  1  polybench/medley/deriche/deriche
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/medley/deriche/deriche.after.c: In function ‘kernel_deriche’:
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/medley/deriche/deriche.after.c:86:8: error: conflicting types for ‘k’
+   86 | double k = (temp1 * temp1) / temp2;
+      |        ^
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/medley/deriche/deriche.after.c:78:15: note: previous declaration of ‘k’ was here
+   78 |     DATA_TYPE k;
+      |               ^
+
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/medley/deriche/deriche.after.c: In function ‘kernel_deriche’:
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/medley/deriche/deriche.after.c:85:11: error: redeclaration of ‘k’ with no linkage
+   85 | DATA_TYPE k = (temp1 * temp1) / temp2;
+      |           ^
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/medley/deriche/deriche.after.c:78:15: note: previous declaration of ‘k’ was here
+   78 |     DATA_TYPE k;
+      |               ^
+i,basename  28  polybench/stencils/adi/adi
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/stencils/adi/adi.after.c: In function ‘kernel_adi’:
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/stencils/adi/adi.after.c:99:11: error: redeclaration of ‘B1’ with no linkage
+   99 | DATA_TYPE B1 = SCALAR_VAL(2.0);
+      |           ^~
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/stencils/adi/adi.after.c:75:13: note: previous declaration of ‘B1’ was here
+   75 |   DATA_TYPE B1, B2;
+      |             ^~
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/stencils/adi/adi.after.c:100:11: error: redeclaration of ‘B2’ with no linkage
+  100 | DATA_TYPE B2 = SCALAR_VAL(1.0);
+      |           ^~
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/stencils/adi/adi.after.c:75:17: note: previous declaration of ‘B2’ was here
+   75 |   DATA_TYPE B1, B2;
+      |                 ^~
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/stencils/adi/adi.after.c:101:11: error: redeclaration of ‘mul1’ with no linkage
+  101 | DATA_TYPE mul1 = B1 * inv_TSTEPS / (inv_N * inv_N);
+      |           ^~~~
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/stencils/adi/adi.after.c:76:13: note: previous declaration of ‘mul1’ was here
+   76 |   DATA_TYPE mul1, mul2;
+      |             ^~~~
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/stencils/adi/adi.after.c:102:11: error: redeclaration of ‘mul2’ with no linkage
+  102 | DATA_TYPE mul2 = B2 * inv_TSTEPS / (inv_N * inv_N);
+      |           ^~~~
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/stencils/adi/adi.after.c:76:19: note: previous declaration of ‘mul2’ was here
+   76 |   DATA_TYPE mul1, mul2;
+      |                   ^~~~
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/stencils/adi/adi.after.c:104:11: error: redeclaration of ‘a’ with no linkage
+  104 | DATA_TYPE a = -mul1 / SCALAR_VAL(2.0);
+      |           ^
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/stencils/adi/adi.after.c:77:13: note: previous declaration of ‘a’ was here
+   77 |   DATA_TYPE a, b, c, d, e, f;
+      |             ^
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/stencils/adi/adi.after.c:105:11: error: redeclaration of ‘b’ with no linkage
+  105 | DATA_TYPE b = SCALAR_VAL(1.0) + mul1;
+      |           ^
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/stencils/adi/adi.after.c:77:16: note: previous declaration of ‘b’ was here
+   77 |   DATA_TYPE a, b, c, d, e, f;
+      |                ^
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/stencils/adi/adi.after.c:106:11: error: redeclaration of ‘c’ with no linkage
+  106 | DATA_TYPE c = a;
+      |           ^
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/stencils/adi/adi.after.c:77:19: note: previous declaration of ‘c’ was here
+   77 |   DATA_TYPE a, b, c, d, e, f;
+      |                   ^
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/stencils/adi/adi.after.c:107:11: error: redeclaration of ‘d’ with no linkage
+  107 | DATA_TYPE d = -mul2 / SCALAR_VAL(2.0);
+      |           ^
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/stencils/adi/adi.after.c:77:22: note: previous declaration of ‘d’ was here
+   77 |   DATA_TYPE a, b, c, d, e, f;
+      |                      ^
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/stencils/adi/adi.after.c:108:11: error: redeclaration of ‘e’ with no linkage
+  108 | DATA_TYPE e = SCALAR_VAL(1.0) + mul2;
+      |           ^
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/stencils/adi/adi.after.c:77:25: note: previous declaration of ‘e’ was here
+   77 |   DATA_TYPE a, b, c, d, e, f;
+      |                         ^
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/stencils/adi/adi.after.c:109:11: error: redeclaration of ‘f’ with no linkage
+  109 | DATA_TYPE f = d;
+      |           ^
+/datadisk4/cyy/rag_code/polybench/polybench_norag/polybench/stencils/adi/adi.after.c:77:28: note: previous declaration of ‘f’ was here
+   77 |   DATA_TYPE a, b, c, d, e, f;
+      |                            ^

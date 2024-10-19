@@ -1,0 +1,30 @@
+{"code": "./datamining/correlation/correlation.c", "time": "6.780753", "checksum": [["corr", "checksum:", "1440000.000000"]]}
+{"code": "./datamining/covariance/covariance.c", "time": "6.709359", "checksum": [["cov", "checksum:", "58743970862.500038"]]}
+{"code": "./linear-algebra/kernels/2mm/2mm.c", "time": "2.553818", "checksum": [["D", "checksum:", "172462371438.675995"]]}
+{"code": "./linear-algebra/kernels/3mm/3mm.c", "time": "4.178476", "checksum": [["G", "checksum:", "91514098535.423019"]]}
+{"code": "./linear-algebra/kernels/atax/atax.c", "time": "0.008124", "checksum": [["y", "checksum:", "152054775.336579"]]}
+{"code": "./linear-algebra/kernels/bicg/bicg.c", "time": "0.018102", "checksum": [["s", "checksum:", "991183.881270"], ["q", "checksum:", "989505.394737"]]}
+{"code": "./linear-algebra/kernels/doitgen/doitgen.c", "time": "0.671390", "checksum": [["A", "checksum:", "128365098.499538"]]}
+{"code": "./linear-algebra/kernels/mvt/mvt.c", "time": "0.026429", "checksum": [["x1", "checksum:", "995886.200000"], ["x2", "checksum:", "995883.100000"]]}
+{"code": "./linear-algebra/blas/gemm/gemm.c", "time": "0.694307", "checksum": [["C", "checksum:", "485480580.749989"]]}
+{"code": "./linear-algebra/blas/gemver/gemver.c", "time": "0.029689", "checksum": [["w", "checksum:", "25145509115487.406250"]]}
+{"code": "./linear-algebra/blas/gesummv/gesummv.c", "time": "0.005906", "checksum": [["y", "checksum:", "1133284.050000"]]}
+{"code": "./linear-algebra/blas/symm/symm.c", "time": "3.068993", "checksum": [["C", "checksum:", "4481730.000002"]]}
+{"code": "./linear-algebra/blas/syr2k/syr2k.c", "time": "4.535951", "checksum": [["C", "checksum:", "532895908.824972"]]}
+{"code": "./linear-algebra/blas/syrk/syrk.c", "time": "1.041462", "checksum": [["C", "checksum:", "266255237.985000"]]}
+{"code": "./linear-algebra/blas/trmm/trmm.c", "time": "2.799332", "checksum": [["B", "checksum:", "225262574.624997"]]}
+{"code": "./linear-algebra/solvers/cholesky/cholesky.c", "time": "1.768838", "checksum": [["A", "checksum:", "1335333.000000"]]}
+{"code": "./linear-algebra/solvers/durbin/durbin.c", "time": "0.006861", "checksum": [["y", "checksum:", "-1.183538"]]}
+{"code": "./linear-algebra/solvers/gramschmidt/gramschmidt.c", "time": "12.552280", "checksum": [["R", "checksum:", "3729285.997495"], ["Q", "checksum:", "9.325004"]]}
+{"code": "./linear-algebra/solvers/lu/lu.c", "time": "6.257633", "checksum": [["A", "checksum:", "2668666.000000"]]}
+{"code": "./linear-algebra/solvers/ludcmp/ludcmp.c", "time": "5.988291", "checksum": [["x", "checksum:", "4.000250"]]}
+{"code": "./linear-algebra/solvers/trisolv/trisolv.c", "time": "0.003129", "checksum": [["x", "checksum:", "631.844622"]]}
+{"code": "./medley/deriche/deriche.c", "time": "0.312195", "checksum": [["imgOut", "checksum:", "165345.687500"]]}
+{"code": "./medley/floyd-warshall/floyd-warshall.c", "time": "17.864324", "checksum": [["path", "checksum:", "14377620"]]}
+{"code": "./medley/nussinov/nussinov.c", "time": "6.149036", "checksum": [["table", "checksum:", "1298960624"]]}
+{"code": "./stencils/adi/adi.c", "time": "13.187068", "checksum": [["u", "checksum:", "1000000.000000"]]}
+{"code": "./stencils/fdtd-2d/fdtd-2d.c", "time": "2.179225", "checksum": [["ex", "checksum:", "212842787.527663"], ["ey", "checksum:", "201217072.442987"], ["hz", "checksum:", "230629904.467333"]]}
+{"code": "./stencils/heat-3d/heat-3d.c", "time": "2.525905", "checksum": [["A", "checksum:", "25848000.000000"]]}
+{"code": "./stencils/jacobi-1d/jacobi-1d.c", "time": "0.002798", "checksum": [["A", "checksum:", "991.686716"]]}
+{"code": "./stencils/jacobi-2d/jacobi-2d.c", "time": "1.996125", "checksum": [["A", "checksum:", "550116615.681134"]]}
+{"code": "./stencils/seidel-2d/seidel-2d.c", "time": "24.351630", "checksum": [["A", "checksum:", "2002002500.000775"]]}

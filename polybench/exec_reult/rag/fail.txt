@@ -1,0 +1,8 @@
+
+adi
+seidel-2d
+ludcmp
+lu
+gramschmidt
+cholesky
+floyd-warshall

@@ -1,0 +1,12 @@
+*.zip
+*.log
+search.py
+draw.py
+__pycache__
+.conda
+.vscode
+data/pluto_code/*
+data/raw_data/*
+*.after.c
+*.out
+*.checksum

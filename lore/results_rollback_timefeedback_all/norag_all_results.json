@@ -1,0 +1,1814 @@
+{
+    "compile1": {
+        "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc": {
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_final": false
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky": {
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay": {
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_final": true
+        },
+        "Freebench/1_Freebench_pifft3": {
+            "Freebench/1_Freebench_pifft3_0": true,
+            "Freebench/1_Freebench_pifft3_1": true,
+            "Freebench/1_Freebench_pifft3_2": true,
+            "Freebench/1_Freebench_pifft3_final": true
+        },
+        "Freebench/1_Freebench_pifft4": {
+            "Freebench/1_Freebench_pifft4_0": true,
+            "Freebench/1_Freebench_pifft4_1": true,
+            "Freebench/1_Freebench_pifft4_2": true,
+            "Freebench/1_Freebench_pifft4_final": true
+        },
+        "Freebench/1_Freebench_pcompress2": {
+            "Freebench/1_Freebench_pcompress2_0": true,
+            "Freebench/1_Freebench_pcompress2_1": true,
+            "Freebench/1_Freebench_pcompress2_2": true,
+            "Freebench/1_Freebench_pcompress2_final": true
+        },
+        "Freebench/1_Freebench_pifft2": {
+            "Freebench/1_Freebench_pifft2_0": true,
+            "Freebench/1_Freebench_pifft2_1": true,
+            "Freebench/1_Freebench_pifft2_2": true,
+            "Freebench/1_Freebench_pifft2_final": true
+        },
+        "Freebench/1_Freebench_pifft1": {
+            "Freebench/1_Freebench_pifft1_0": true,
+            "Freebench/1_Freebench_pifft1_1": true,
+            "Freebench/1_Freebench_pifft1_2": true,
+            "Freebench/1_Freebench_pifft1_final": true
+        },
+        "SCImark+NPB/2_NPB_bt14": {
+            "SCImark+NPB/2_NPB_bt14_0": false,
+            "SCImark+NPB/2_NPB_bt14_1": true,
+            "SCImark+NPB/2_NPB_bt14_2": false,
+            "SCImark+NPB/2_NPB_bt14_final": true
+        },
+        "SCImark+NPB/2_NPB_bt": {
+            "SCImark+NPB/2_NPB_bt_0": true,
+            "SCImark+NPB/2_NPB_bt_1": true,
+            "SCImark+NPB/2_NPB_bt_2": true,
+            "SCImark+NPB/2_NPB_bt_final": true
+        },
+        "SCImark+NPB/2_NPB_bt17": {
+            "SCImark+NPB/2_NPB_bt17_0": true,
+            "SCImark+NPB/2_NPB_bt17_1": true,
+            "SCImark+NPB/2_NPB_bt17_2": true,
+            "SCImark+NPB/2_NPB_bt17_final": true
+        },
+        "SCImark+NPB/2_NPB_lu13": {
+            "SCImark+NPB/2_NPB_lu13_0": true,
+            "SCImark+NPB/2_NPB_lu13_1": true,
+            "SCImark+NPB/2_NPB_lu13_2": true,
+            "SCImark+NPB/2_NPB_lu13_final": true
+        },
+        "SCImark+NPB/2_NPB_lu7": {
+            "SCImark+NPB/2_NPB_lu7_0": true,
+            "SCImark+NPB/2_NPB_lu7_1": true,
+            "SCImark+NPB/2_NPB_lu7_2": true,
+            "SCImark+NPB/2_NPB_lu7_final": true
+        },
+        "SCImark+NPB/2_NPB_bt18": {
+            "SCImark+NPB/2_NPB_bt18_0": true,
+            "SCImark+NPB/2_NPB_bt18_1": true,
+            "SCImark+NPB/2_NPB_bt18_2": true,
+            "SCImark+NPB/2_NPB_bt18_final": true
+        },
+        "SCImark+NPB/2_NPB_bt5": {
+            "SCImark+NPB/2_NPB_bt5_0": true,
+            "SCImark+NPB/2_NPB_bt5_1": true,
+            "SCImark+NPB/2_NPB_bt5_2": true,
+            "SCImark+NPB/2_NPB_bt5_final": true
+        },
+        "SCImark+NPB/2_NPB_bt15": {
+            "SCImark+NPB/2_NPB_bt15_0": true,
+            "SCImark+NPB/2_NPB_bt15_1": true,
+            "SCImark+NPB/2_NPB_bt15_2": true,
+            "SCImark+NPB/2_NPB_bt15_final": true
+        },
+        "SCImark+NPB/2_NPB_bt11": {
+            "SCImark+NPB/2_NPB_bt11_0": true,
+            "SCImark+NPB/2_NPB_bt11_1": true,
+            "SCImark+NPB/2_NPB_bt11_2": true,
+            "SCImark+NPB/2_NPB_bt11_final": true
+        },
+        "SCImark+NPB/2_NPB_bt9": {
+            "SCImark+NPB/2_NPB_bt9_0": true,
+            "SCImark+NPB/2_NPB_bt9_1": true,
+            "SCImark+NPB/2_NPB_bt9_2": true,
+            "SCImark+NPB/2_NPB_bt9_final": true
+        },
+        "SCImark+NPB/2_NPB_bt1": {
+            "SCImark+NPB/2_NPB_bt1_0": false,
+            "SCImark+NPB/2_NPB_bt1_1": false,
+            "SCImark+NPB/2_NPB_bt1_2": false,
+            "SCImark+NPB/2_NPB_bt1_final": true
+        },
+        "SCImark+NPB/2_NPB_bt2": {
+            "SCImark+NPB/2_NPB_bt2_0": true,
+            "SCImark+NPB/2_NPB_bt2_1": true,
+            "SCImark+NPB/2_NPB_bt2_2": true,
+            "SCImark+NPB/2_NPB_bt2_final": true
+        },
+        "SCImark+NPB/2_NPB_bt6": {
+            "SCImark+NPB/2_NPB_bt6_0": true,
+            "SCImark+NPB/2_NPB_bt6_1": true,
+            "SCImark+NPB/2_NPB_bt6_2": true,
+            "SCImark+NPB/2_NPB_bt6_final": true
+        },
+        "SCImark+NPB/2_NPB_lu": {
+            "SCImark+NPB/2_NPB_lu_0": true,
+            "SCImark+NPB/2_NPB_lu_1": true,
+            "SCImark+NPB/2_NPB_lu_2": true,
+            "SCImark+NPB/2_NPB_lu_final": true
+        },
+        "SCImark+NPB/2_SCImark_sor": {
+            "SCImark+NPB/2_SCImark_sor_0": true,
+            "SCImark+NPB/2_SCImark_sor_1": true,
+            "SCImark+NPB/2_SCImark_sor_2": true,
+            "SCImark+NPB/2_SCImark_sor_final": true
+        },
+        "SCImark+NPB/2_NPB_mg1": {
+            "SCImark+NPB/2_NPB_mg1_0": true,
+            "SCImark+NPB/2_NPB_mg1_1": true,
+            "SCImark+NPB/2_NPB_mg1_2": true,
+            "SCImark+NPB/2_NPB_mg1_final": true
+        },
+        "SCImark+NPB/2_NPB_bt16": {
+            "SCImark+NPB/2_NPB_bt16_0": true,
+            "SCImark+NPB/2_NPB_bt16_1": true,
+            "SCImark+NPB/2_NPB_bt16_2": true,
+            "SCImark+NPB/2_NPB_bt16_final": true
+        },
+        "SCImark+NPB/2_NPB_mg5": {
+            "SCImark+NPB/2_NPB_mg5_0": true,
+            "SCImark+NPB/2_NPB_mg5_1": true,
+            "SCImark+NPB/2_NPB_mg5_2": true,
+            "SCImark+NPB/2_NPB_mg5_final": true
+        },
+        "SCImark+NPB/2_SCImark_lu1": {
+            "SCImark+NPB/2_SCImark_lu1_0": true,
+            "SCImark+NPB/2_SCImark_lu1_1": true,
+            "SCImark+NPB/2_SCImark_lu1_2": true,
+            "SCImark+NPB/2_SCImark_lu1_final": true
+        },
+        "SCImark+NPB/2_NPB_ft2": {
+            "SCImark+NPB/2_NPB_ft2_0": true,
+            "SCImark+NPB/2_NPB_ft2_1": true,
+            "SCImark+NPB/2_NPB_ft2_2": true,
+            "SCImark+NPB/2_NPB_ft2_final": true
+        },
+        "SCImark+NPB/2_NPB_lu5": {
+            "SCImark+NPB/2_NPB_lu5_0": true,
+            "SCImark+NPB/2_NPB_lu5_1": true,
+            "SCImark+NPB/2_NPB_lu5_2": true,
+            "SCImark+NPB/2_NPB_lu5_final": true
+        },
+        "SCImark+NPB/2_NPB_lu3": {
+            "SCImark+NPB/2_NPB_lu3_0": true,
+            "SCImark+NPB/2_NPB_lu3_1": true,
+            "SCImark+NPB/2_NPB_lu3_2": true,
+            "SCImark+NPB/2_NPB_lu3_final": true
+        },
+        "SCImark+NPB/2_NPB_bt8": {
+            "SCImark+NPB/2_NPB_bt8_0": true,
+            "SCImark+NPB/2_NPB_bt8_1": true,
+            "SCImark+NPB/2_NPB_bt8_2": true,
+            "SCImark+NPB/2_NPB_bt8_final": true
+        },
+        "SCImark+NPB/2_NPB_bt4": {
+            "SCImark+NPB/2_NPB_bt4_0": true,
+            "SCImark+NPB/2_NPB_bt4_1": true,
+            "SCImark+NPB/2_NPB_bt4_2": true,
+            "SCImark+NPB/2_NPB_bt4_final": false
+        },
+        "SCImark+NPB/2_NPB_cg": {
+            "SCImark+NPB/2_NPB_cg_0": true,
+            "SCImark+NPB/2_NPB_cg_1": true,
+            "SCImark+NPB/2_NPB_cg_2": true,
+            "SCImark+NPB/2_NPB_cg_final": true
+        },
+        "SCImark+NPB/2_NPB_mg4": {
+            "SCImark+NPB/2_NPB_mg4_0": true,
+            "SCImark+NPB/2_NPB_mg4_1": true,
+            "SCImark+NPB/2_NPB_mg4_2": true,
+            "SCImark+NPB/2_NPB_mg4_final": true
+        },
+        "SCImark+NPB/2_NPB_bt7": {
+            "SCImark+NPB/2_NPB_bt7_0": true,
+            "SCImark+NPB/2_NPB_bt7_1": true,
+            "SCImark+NPB/2_NPB_bt7_2": true,
+            "SCImark+NPB/2_NPB_bt7_final": true
+        },
+        "SCImark+NPB/2_NPB_mg3": {
+            "SCImark+NPB/2_NPB_mg3_0": true,
+            "SCImark+NPB/2_NPB_mg3_1": true,
+            "SCImark+NPB/2_NPB_mg3_2": true,
+            "SCImark+NPB/2_NPB_mg3_final": true
+        }
+    },
+    "compile2": {
+        "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc": {
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky": {
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay": {
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_final": true
+        },
+        "Freebench/1_Freebench_pifft3": {
+            "Freebench/1_Freebench_pifft3_0": true,
+            "Freebench/1_Freebench_pifft3_1": true,
+            "Freebench/1_Freebench_pifft3_2": true,
+            "Freebench/1_Freebench_pifft3_final": true
+        },
+        "Freebench/1_Freebench_pifft4": {
+            "Freebench/1_Freebench_pifft4_0": true,
+            "Freebench/1_Freebench_pifft4_1": true,
+            "Freebench/1_Freebench_pifft4_2": true,
+            "Freebench/1_Freebench_pifft4_final": true
+        },
+        "Freebench/1_Freebench_pcompress2": {
+            "Freebench/1_Freebench_pcompress2_0": true,
+            "Freebench/1_Freebench_pcompress2_1": true,
+            "Freebench/1_Freebench_pcompress2_2": true,
+            "Freebench/1_Freebench_pcompress2_final": true
+        },
+        "Freebench/1_Freebench_pifft2": {
+            "Freebench/1_Freebench_pifft2_0": true,
+            "Freebench/1_Freebench_pifft2_1": true,
+            "Freebench/1_Freebench_pifft2_2": true,
+            "Freebench/1_Freebench_pifft2_final": true
+        },
+        "Freebench/1_Freebench_pifft1": {
+            "Freebench/1_Freebench_pifft1_0": true,
+            "Freebench/1_Freebench_pifft1_1": true,
+            "Freebench/1_Freebench_pifft1_2": true,
+            "Freebench/1_Freebench_pifft1_final": true
+        },
+        "SCImark+NPB/2_NPB_bt14": {
+            "SCImark+NPB/2_NPB_bt14_0": true,
+            "SCImark+NPB/2_NPB_bt14_1": true,
+            "SCImark+NPB/2_NPB_bt14_2": true,
+            "SCImark+NPB/2_NPB_bt14_final": true
+        },
+        "SCImark+NPB/2_NPB_bt": {
+            "SCImark+NPB/2_NPB_bt_0": true,
+            "SCImark+NPB/2_NPB_bt_1": true,
+            "SCImark+NPB/2_NPB_bt_2": true,
+            "SCImark+NPB/2_NPB_bt_final": true
+        },
+        "SCImark+NPB/2_NPB_bt17": {
+            "SCImark+NPB/2_NPB_bt17_0": true,
+            "SCImark+NPB/2_NPB_bt17_1": true,
+            "SCImark+NPB/2_NPB_bt17_2": true,
+            "SCImark+NPB/2_NPB_bt17_final": true
+        },
+        "SCImark+NPB/2_NPB_lu13": {
+            "SCImark+NPB/2_NPB_lu13_0": true,
+            "SCImark+NPB/2_NPB_lu13_1": true,
+            "SCImark+NPB/2_NPB_lu13_2": true,
+            "SCImark+NPB/2_NPB_lu13_final": true
+        },
+        "SCImark+NPB/2_NPB_lu7": {
+            "SCImark+NPB/2_NPB_lu7_0": true,
+            "SCImark+NPB/2_NPB_lu7_1": true,
+            "SCImark+NPB/2_NPB_lu7_2": true,
+            "SCImark+NPB/2_NPB_lu7_final": true
+        },
+        "SCImark+NPB/2_NPB_bt18": {
+            "SCImark+NPB/2_NPB_bt18_0": true,
+            "SCImark+NPB/2_NPB_bt18_1": true,
+            "SCImark+NPB/2_NPB_bt18_2": true,
+            "SCImark+NPB/2_NPB_bt18_final": true
+        },
+        "SCImark+NPB/2_NPB_bt5": {
+            "SCImark+NPB/2_NPB_bt5_0": true,
+            "SCImark+NPB/2_NPB_bt5_1": true,
+            "SCImark+NPB/2_NPB_bt5_2": true,
+            "SCImark+NPB/2_NPB_bt5_final": true
+        },
+        "SCImark+NPB/2_NPB_bt15": {
+            "SCImark+NPB/2_NPB_bt15_0": true,
+            "SCImark+NPB/2_NPB_bt15_1": true,
+            "SCImark+NPB/2_NPB_bt15_2": true,
+            "SCImark+NPB/2_NPB_bt15_final": true
+        },
+        "SCImark+NPB/2_NPB_bt11": {
+            "SCImark+NPB/2_NPB_bt11_0": true,
+            "SCImark+NPB/2_NPB_bt11_1": true,
+            "SCImark+NPB/2_NPB_bt11_2": true,
+            "SCImark+NPB/2_NPB_bt11_final": true
+        },
+        "SCImark+NPB/2_NPB_bt9": {
+            "SCImark+NPB/2_NPB_bt9_0": true,
+            "SCImark+NPB/2_NPB_bt9_1": true,
+            "SCImark+NPB/2_NPB_bt9_2": true,
+            "SCImark+NPB/2_NPB_bt9_final": true
+        },
+        "SCImark+NPB/2_NPB_bt1": {
+            "SCImark+NPB/2_NPB_bt1_0": true,
+            "SCImark+NPB/2_NPB_bt1_1": true,
+            "SCImark+NPB/2_NPB_bt1_2": true,
+            "SCImark+NPB/2_NPB_bt1_final": true
+        },
+        "SCImark+NPB/2_NPB_bt2": {
+            "SCImark+NPB/2_NPB_bt2_0": true,
+            "SCImark+NPB/2_NPB_bt2_1": true,
+            "SCImark+NPB/2_NPB_bt2_2": true,
+            "SCImark+NPB/2_NPB_bt2_final": true
+        },
+        "SCImark+NPB/2_NPB_bt6": {
+            "SCImark+NPB/2_NPB_bt6_0": true,
+            "SCImark+NPB/2_NPB_bt6_1": true,
+            "SCImark+NPB/2_NPB_bt6_2": true,
+            "SCImark+NPB/2_NPB_bt6_final": true
+        },
+        "SCImark+NPB/2_NPB_lu": {
+            "SCImark+NPB/2_NPB_lu_0": true,
+            "SCImark+NPB/2_NPB_lu_1": true,
+            "SCImark+NPB/2_NPB_lu_2": true,
+            "SCImark+NPB/2_NPB_lu_final": true
+        },
+        "SCImark+NPB/2_SCImark_sor": {
+            "SCImark+NPB/2_SCImark_sor_0": true,
+            "SCImark+NPB/2_SCImark_sor_1": true,
+            "SCImark+NPB/2_SCImark_sor_2": true,
+            "SCImark+NPB/2_SCImark_sor_final": true
+        },
+        "SCImark+NPB/2_NPB_mg1": {
+            "SCImark+NPB/2_NPB_mg1_0": true,
+            "SCImark+NPB/2_NPB_mg1_1": true,
+            "SCImark+NPB/2_NPB_mg1_2": true,
+            "SCImark+NPB/2_NPB_mg1_final": true
+        },
+        "SCImark+NPB/2_NPB_bt16": {
+            "SCImark+NPB/2_NPB_bt16_0": true,
+            "SCImark+NPB/2_NPB_bt16_1": true,
+            "SCImark+NPB/2_NPB_bt16_2": true,
+            "SCImark+NPB/2_NPB_bt16_final": true
+        },
+        "SCImark+NPB/2_NPB_mg5": {
+            "SCImark+NPB/2_NPB_mg5_0": true,
+            "SCImark+NPB/2_NPB_mg5_1": true,
+            "SCImark+NPB/2_NPB_mg5_2": true,
+            "SCImark+NPB/2_NPB_mg5_final": true
+        },
+        "SCImark+NPB/2_SCImark_lu1": {
+            "SCImark+NPB/2_SCImark_lu1_0": true,
+            "SCImark+NPB/2_SCImark_lu1_1": true,
+            "SCImark+NPB/2_SCImark_lu1_2": true,
+            "SCImark+NPB/2_SCImark_lu1_final": true
+        },
+        "SCImark+NPB/2_NPB_ft2": {
+            "SCImark+NPB/2_NPB_ft2_0": true,
+            "SCImark+NPB/2_NPB_ft2_1": true,
+            "SCImark+NPB/2_NPB_ft2_2": true,
+            "SCImark+NPB/2_NPB_ft2_final": true
+        },
+        "SCImark+NPB/2_NPB_lu5": {
+            "SCImark+NPB/2_NPB_lu5_0": true,
+            "SCImark+NPB/2_NPB_lu5_1": true,
+            "SCImark+NPB/2_NPB_lu5_2": true,
+            "SCImark+NPB/2_NPB_lu5_final": true
+        },
+        "SCImark+NPB/2_NPB_lu3": {
+            "SCImark+NPB/2_NPB_lu3_0": true,
+            "SCImark+NPB/2_NPB_lu3_1": true,
+            "SCImark+NPB/2_NPB_lu3_2": true,
+            "SCImark+NPB/2_NPB_lu3_final": true
+        },
+        "SCImark+NPB/2_NPB_bt8": {
+            "SCImark+NPB/2_NPB_bt8_0": true,
+            "SCImark+NPB/2_NPB_bt8_1": true,
+            "SCImark+NPB/2_NPB_bt8_2": true,
+            "SCImark+NPB/2_NPB_bt8_final": true
+        },
+        "SCImark+NPB/2_NPB_bt4": {
+            "SCImark+NPB/2_NPB_bt4_0": true,
+            "SCImark+NPB/2_NPB_bt4_1": true,
+            "SCImark+NPB/2_NPB_bt4_2": true,
+            "SCImark+NPB/2_NPB_bt4_final": true
+        },
+        "SCImark+NPB/2_NPB_cg": {
+            "SCImark+NPB/2_NPB_cg_0": true,
+            "SCImark+NPB/2_NPB_cg_1": true,
+            "SCImark+NPB/2_NPB_cg_2": true,
+            "SCImark+NPB/2_NPB_cg_final": true
+        },
+        "SCImark+NPB/2_NPB_mg4": {
+            "SCImark+NPB/2_NPB_mg4_0": true,
+            "SCImark+NPB/2_NPB_mg4_1": true,
+            "SCImark+NPB/2_NPB_mg4_2": true,
+            "SCImark+NPB/2_NPB_mg4_final": true
+        },
+        "SCImark+NPB/2_NPB_bt7": {
+            "SCImark+NPB/2_NPB_bt7_0": true,
+            "SCImark+NPB/2_NPB_bt7_1": true,
+            "SCImark+NPB/2_NPB_bt7_2": true,
+            "SCImark+NPB/2_NPB_bt7_final": true
+        },
+        "SCImark+NPB/2_NPB_mg3": {
+            "SCImark+NPB/2_NPB_mg3_0": true,
+            "SCImark+NPB/2_NPB_mg3_1": true,
+            "SCImark+NPB/2_NPB_mg3_2": true,
+            "SCImark+NPB/2_NPB_mg3_final": true
+        }
+    },
+    "applied_passes": {
+        "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc": {
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_0": false,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_final": false
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky": {
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_1": false,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_2": false,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_final": false
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay": {
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_final": true
+        },
+        "Freebench/1_Freebench_pifft3": {
+            "Freebench/1_Freebench_pifft3_0": true,
+            "Freebench/1_Freebench_pifft3_1": true,
+            "Freebench/1_Freebench_pifft3_2": true,
+            "Freebench/1_Freebench_pifft3_final": true
+        },
+        "Freebench/1_Freebench_pifft4": {
+            "Freebench/1_Freebench_pifft4_0": true,
+            "Freebench/1_Freebench_pifft4_1": false,
+            "Freebench/1_Freebench_pifft4_2": false,
+            "Freebench/1_Freebench_pifft4_final": true
+        },
+        "Freebench/1_Freebench_pcompress2": {
+            "Freebench/1_Freebench_pcompress2_0": true,
+            "Freebench/1_Freebench_pcompress2_1": true,
+            "Freebench/1_Freebench_pcompress2_2": true,
+            "Freebench/1_Freebench_pcompress2_final": true
+        },
+        "Freebench/1_Freebench_pifft2": {
+            "Freebench/1_Freebench_pifft2_0": true,
+            "Freebench/1_Freebench_pifft2_1": true,
+            "Freebench/1_Freebench_pifft2_2": true,
+            "Freebench/1_Freebench_pifft2_final": true
+        },
+        "Freebench/1_Freebench_pifft1": {
+            "Freebench/1_Freebench_pifft1_0": true,
+            "Freebench/1_Freebench_pifft1_1": true,
+            "Freebench/1_Freebench_pifft1_2": true,
+            "Freebench/1_Freebench_pifft1_final": true
+        },
+        "SCImark+NPB/2_NPB_bt14": {
+            "SCImark+NPB/2_NPB_bt14_0": true,
+            "SCImark+NPB/2_NPB_bt14_1": true,
+            "SCImark+NPB/2_NPB_bt14_2": true,
+            "SCImark+NPB/2_NPB_bt14_final": false
+        },
+        "SCImark+NPB/2_NPB_bt": {
+            "SCImark+NPB/2_NPB_bt_0": true,
+            "SCImark+NPB/2_NPB_bt_1": true,
+            "SCImark+NPB/2_NPB_bt_2": true,
+            "SCImark+NPB/2_NPB_bt_final": false
+        },
+        "SCImark+NPB/2_NPB_bt17": {
+            "SCImark+NPB/2_NPB_bt17_0": true,
+            "SCImark+NPB/2_NPB_bt17_1": true,
+            "SCImark+NPB/2_NPB_bt17_2": true,
+            "SCImark+NPB/2_NPB_bt17_final": true
+        },
+        "SCImark+NPB/2_NPB_lu13": {
+            "SCImark+NPB/2_NPB_lu13_0": true,
+            "SCImark+NPB/2_NPB_lu13_1": true,
+            "SCImark+NPB/2_NPB_lu13_2": true,
+            "SCImark+NPB/2_NPB_lu13_final": true
+        },
+        "SCImark+NPB/2_NPB_lu7": {
+            "SCImark+NPB/2_NPB_lu7_0": true,
+            "SCImark+NPB/2_NPB_lu7_1": true,
+            "SCImark+NPB/2_NPB_lu7_2": true,
+            "SCImark+NPB/2_NPB_lu7_final": true
+        },
+        "SCImark+NPB/2_NPB_bt18": {
+            "SCImark+NPB/2_NPB_bt18_0": true,
+            "SCImark+NPB/2_NPB_bt18_1": true,
+            "SCImark+NPB/2_NPB_bt18_2": true,
+            "SCImark+NPB/2_NPB_bt18_final": true
+        },
+        "SCImark+NPB/2_NPB_bt5": {
+            "SCImark+NPB/2_NPB_bt5_0": true,
+            "SCImark+NPB/2_NPB_bt5_1": true,
+            "SCImark+NPB/2_NPB_bt5_2": true,
+            "SCImark+NPB/2_NPB_bt5_final": true
+        },
+        "SCImark+NPB/2_NPB_bt15": {
+            "SCImark+NPB/2_NPB_bt15_0": true,
+            "SCImark+NPB/2_NPB_bt15_1": true,
+            "SCImark+NPB/2_NPB_bt15_2": true,
+            "SCImark+NPB/2_NPB_bt15_final": true
+        },
+        "SCImark+NPB/2_NPB_bt11": {
+            "SCImark+NPB/2_NPB_bt11_0": true,
+            "SCImark+NPB/2_NPB_bt11_1": true,
+            "SCImark+NPB/2_NPB_bt11_2": true,
+            "SCImark+NPB/2_NPB_bt11_final": true
+        },
+        "SCImark+NPB/2_NPB_bt9": {
+            "SCImark+NPB/2_NPB_bt9_0": true,
+            "SCImark+NPB/2_NPB_bt9_1": true,
+            "SCImark+NPB/2_NPB_bt9_2": true,
+            "SCImark+NPB/2_NPB_bt9_final": true
+        },
+        "SCImark+NPB/2_NPB_bt1": {
+            "SCImark+NPB/2_NPB_bt1_0": true,
+            "SCImark+NPB/2_NPB_bt1_1": true,
+            "SCImark+NPB/2_NPB_bt1_2": true,
+            "SCImark+NPB/2_NPB_bt1_final": true
+        },
+        "SCImark+NPB/2_NPB_bt2": {
+            "SCImark+NPB/2_NPB_bt2_0": true,
+            "SCImark+NPB/2_NPB_bt2_1": true,
+            "SCImark+NPB/2_NPB_bt2_2": true,
+            "SCImark+NPB/2_NPB_bt2_final": true
+        },
+        "SCImark+NPB/2_NPB_bt6": {
+            "SCImark+NPB/2_NPB_bt6_0": true,
+            "SCImark+NPB/2_NPB_bt6_1": true,
+            "SCImark+NPB/2_NPB_bt6_2": true,
+            "SCImark+NPB/2_NPB_bt6_final": true
+        },
+        "SCImark+NPB/2_NPB_lu": {
+            "SCImark+NPB/2_NPB_lu_0": true,
+            "SCImark+NPB/2_NPB_lu_1": true,
+            "SCImark+NPB/2_NPB_lu_2": true,
+            "SCImark+NPB/2_NPB_lu_final": true
+        },
+        "SCImark+NPB/2_SCImark_sor": {
+            "SCImark+NPB/2_SCImark_sor_0": true,
+            "SCImark+NPB/2_SCImark_sor_1": true,
+            "SCImark+NPB/2_SCImark_sor_2": true,
+            "SCImark+NPB/2_SCImark_sor_final": true
+        },
+        "SCImark+NPB/2_NPB_mg1": {
+            "SCImark+NPB/2_NPB_mg1_0": true,
+            "SCImark+NPB/2_NPB_mg1_1": true,
+            "SCImark+NPB/2_NPB_mg1_2": true,
+            "SCImark+NPB/2_NPB_mg1_final": true
+        },
+        "SCImark+NPB/2_NPB_bt16": {
+            "SCImark+NPB/2_NPB_bt16_0": true,
+            "SCImark+NPB/2_NPB_bt16_1": false,
+            "SCImark+NPB/2_NPB_bt16_2": false,
+            "SCImark+NPB/2_NPB_bt16_final": true
+        },
+        "SCImark+NPB/2_NPB_mg5": {
+            "SCImark+NPB/2_NPB_mg5_0": true,
+            "SCImark+NPB/2_NPB_mg5_1": true,
+            "SCImark+NPB/2_NPB_mg5_2": true,
+            "SCImark+NPB/2_NPB_mg5_final": true
+        },
+        "SCImark+NPB/2_SCImark_lu1": {
+            "SCImark+NPB/2_SCImark_lu1_0": true,
+            "SCImark+NPB/2_SCImark_lu1_1": true,
+            "SCImark+NPB/2_SCImark_lu1_2": true,
+            "SCImark+NPB/2_SCImark_lu1_final": true
+        },
+        "SCImark+NPB/2_NPB_ft2": {
+            "SCImark+NPB/2_NPB_ft2_0": true,
+            "SCImark+NPB/2_NPB_ft2_1": true,
+            "SCImark+NPB/2_NPB_ft2_2": true,
+            "SCImark+NPB/2_NPB_ft2_final": true
+        },
+        "SCImark+NPB/2_NPB_lu5": {
+            "SCImark+NPB/2_NPB_lu5_0": true,
+            "SCImark+NPB/2_NPB_lu5_1": true,
+            "SCImark+NPB/2_NPB_lu5_2": true,
+            "SCImark+NPB/2_NPB_lu5_final": true
+        },
+        "SCImark+NPB/2_NPB_lu3": {
+            "SCImark+NPB/2_NPB_lu3_0": true,
+            "SCImark+NPB/2_NPB_lu3_1": true,
+            "SCImark+NPB/2_NPB_lu3_2": true,
+            "SCImark+NPB/2_NPB_lu3_final": true
+        },
+        "SCImark+NPB/2_NPB_bt8": {
+            "SCImark+NPB/2_NPB_bt8_0": true,
+            "SCImark+NPB/2_NPB_bt8_1": true,
+            "SCImark+NPB/2_NPB_bt8_2": true,
+            "SCImark+NPB/2_NPB_bt8_final": true
+        },
+        "SCImark+NPB/2_NPB_bt4": {
+            "SCImark+NPB/2_NPB_bt4_0": true,
+            "SCImark+NPB/2_NPB_bt4_1": true,
+            "SCImark+NPB/2_NPB_bt4_2": true,
+            "SCImark+NPB/2_NPB_bt4_final": true
+        },
+        "SCImark+NPB/2_NPB_cg": {
+            "SCImark+NPB/2_NPB_cg_0": true,
+            "SCImark+NPB/2_NPB_cg_1": true,
+            "SCImark+NPB/2_NPB_cg_2": true,
+            "SCImark+NPB/2_NPB_cg_final": true
+        },
+        "SCImark+NPB/2_NPB_mg4": {
+            "SCImark+NPB/2_NPB_mg4_0": true,
+            "SCImark+NPB/2_NPB_mg4_1": true,
+            "SCImark+NPB/2_NPB_mg4_2": true,
+            "SCImark+NPB/2_NPB_mg4_final": true
+        },
+        "SCImark+NPB/2_NPB_bt7": {
+            "SCImark+NPB/2_NPB_bt7_0": true,
+            "SCImark+NPB/2_NPB_bt7_1": true,
+            "SCImark+NPB/2_NPB_bt7_2": true,
+            "SCImark+NPB/2_NPB_bt7_final": true
+        },
+        "SCImark+NPB/2_NPB_mg3": {
+            "SCImark+NPB/2_NPB_mg3_0": true,
+            "SCImark+NPB/2_NPB_mg3_1": true,
+            "SCImark+NPB/2_NPB_mg3_2": true,
+            "SCImark+NPB/2_NPB_mg3_final": true
+        }
+    },
+    "checksum_passes": {
+        "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc": {
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_0": false,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_final": false
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_0": false,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_1": false,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky": {
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_1": false,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_2": false,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_final": false
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay": {
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_final": true
+        },
+        "Freebench/1_Freebench_pifft3": {
+            "Freebench/1_Freebench_pifft3_0": false,
+            "Freebench/1_Freebench_pifft3_1": false,
+            "Freebench/1_Freebench_pifft3_2": false,
+            "Freebench/1_Freebench_pifft3_final": true
+        },
+        "Freebench/1_Freebench_pifft4": {
+            "Freebench/1_Freebench_pifft4_0": false,
+            "Freebench/1_Freebench_pifft4_1": false,
+            "Freebench/1_Freebench_pifft4_2": false,
+            "Freebench/1_Freebench_pifft4_final": true
+        },
+        "Freebench/1_Freebench_pcompress2": {
+            "Freebench/1_Freebench_pcompress2_0": true,
+            "Freebench/1_Freebench_pcompress2_1": true,
+            "Freebench/1_Freebench_pcompress2_2": true,
+            "Freebench/1_Freebench_pcompress2_final": true
+        },
+        "Freebench/1_Freebench_pifft2": {
+            "Freebench/1_Freebench_pifft2_0": true,
+            "Freebench/1_Freebench_pifft2_1": true,
+            "Freebench/1_Freebench_pifft2_2": true,
+            "Freebench/1_Freebench_pifft2_final": true
+        },
+        "Freebench/1_Freebench_pifft1": {
+            "Freebench/1_Freebench_pifft1_0": true,
+            "Freebench/1_Freebench_pifft1_1": false,
+            "Freebench/1_Freebench_pifft1_2": false,
+            "Freebench/1_Freebench_pifft1_final": true
+        },
+        "SCImark+NPB/2_NPB_bt14": {
+            "SCImark+NPB/2_NPB_bt14_0": false,
+            "SCImark+NPB/2_NPB_bt14_1": true,
+            "SCImark+NPB/2_NPB_bt14_2": false,
+            "SCImark+NPB/2_NPB_bt14_final": false
+        },
+        "SCImark+NPB/2_NPB_bt": {
+            "SCImark+NPB/2_NPB_bt_0": true,
+            "SCImark+NPB/2_NPB_bt_1": true,
+            "SCImark+NPB/2_NPB_bt_2": true,
+            "SCImark+NPB/2_NPB_bt_final": false
+        },
+        "SCImark+NPB/2_NPB_bt17": {
+            "SCImark+NPB/2_NPB_bt17_0": true,
+            "SCImark+NPB/2_NPB_bt17_1": true,
+            "SCImark+NPB/2_NPB_bt17_2": true,
+            "SCImark+NPB/2_NPB_bt17_final": true
+        },
+        "SCImark+NPB/2_NPB_lu13": {
+            "SCImark+NPB/2_NPB_lu13_0": true,
+            "SCImark+NPB/2_NPB_lu13_1": true,
+            "SCImark+NPB/2_NPB_lu13_2": true,
+            "SCImark+NPB/2_NPB_lu13_final": true
+        },
+        "SCImark+NPB/2_NPB_lu7": {
+            "SCImark+NPB/2_NPB_lu7_0": true,
+            "SCImark+NPB/2_NPB_lu7_1": true,
+            "SCImark+NPB/2_NPB_lu7_2": true,
+            "SCImark+NPB/2_NPB_lu7_final": true
+        },
+        "SCImark+NPB/2_NPB_bt18": {
+            "SCImark+NPB/2_NPB_bt18_0": true,
+            "SCImark+NPB/2_NPB_bt18_1": true,
+            "SCImark+NPB/2_NPB_bt18_2": true,
+            "SCImark+NPB/2_NPB_bt18_final": true
+        },
+        "SCImark+NPB/2_NPB_bt5": {
+            "SCImark+NPB/2_NPB_bt5_0": false,
+            "SCImark+NPB/2_NPB_bt5_1": false,
+            "SCImark+NPB/2_NPB_bt5_2": false,
+            "SCImark+NPB/2_NPB_bt5_final": false
+        },
+        "SCImark+NPB/2_NPB_bt15": {
+            "SCImark+NPB/2_NPB_bt15_0": false,
+            "SCImark+NPB/2_NPB_bt15_1": false,
+            "SCImark+NPB/2_NPB_bt15_2": false,
+            "SCImark+NPB/2_NPB_bt15_final": false
+        },
+        "SCImark+NPB/2_NPB_bt11": {
+            "SCImark+NPB/2_NPB_bt11_0": true,
+            "SCImark+NPB/2_NPB_bt11_1": false,
+            "SCImark+NPB/2_NPB_bt11_2": true,
+            "SCImark+NPB/2_NPB_bt11_final": true
+        },
+        "SCImark+NPB/2_NPB_bt9": {
+            "SCImark+NPB/2_NPB_bt9_0": true,
+            "SCImark+NPB/2_NPB_bt9_1": true,
+            "SCImark+NPB/2_NPB_bt9_2": true,
+            "SCImark+NPB/2_NPB_bt9_final": false
+        },
+        "SCImark+NPB/2_NPB_bt1": {
+            "SCImark+NPB/2_NPB_bt1_0": false,
+            "SCImark+NPB/2_NPB_bt1_1": false,
+            "SCImark+NPB/2_NPB_bt1_2": false,
+            "SCImark+NPB/2_NPB_bt1_final": true
+        },
+        "SCImark+NPB/2_NPB_bt2": {
+            "SCImark+NPB/2_NPB_bt2_0": false,
+            "SCImark+NPB/2_NPB_bt2_1": true,
+            "SCImark+NPB/2_NPB_bt2_2": true,
+            "SCImark+NPB/2_NPB_bt2_final": true
+        },
+        "SCImark+NPB/2_NPB_bt6": {
+            "SCImark+NPB/2_NPB_bt6_0": false,
+            "SCImark+NPB/2_NPB_bt6_1": false,
+            "SCImark+NPB/2_NPB_bt6_2": false,
+            "SCImark+NPB/2_NPB_bt6_final": false
+        },
+        "SCImark+NPB/2_NPB_lu": {
+            "SCImark+NPB/2_NPB_lu_0": true,
+            "SCImark+NPB/2_NPB_lu_1": true,
+            "SCImark+NPB/2_NPB_lu_2": true,
+            "SCImark+NPB/2_NPB_lu_final": true
+        },
+        "SCImark+NPB/2_SCImark_sor": {
+            "SCImark+NPB/2_SCImark_sor_0": true,
+            "SCImark+NPB/2_SCImark_sor_1": true,
+            "SCImark+NPB/2_SCImark_sor_2": true,
+            "SCImark+NPB/2_SCImark_sor_final": true
+        },
+        "SCImark+NPB/2_NPB_mg1": {
+            "SCImark+NPB/2_NPB_mg1_0": true,
+            "SCImark+NPB/2_NPB_mg1_1": true,
+            "SCImark+NPB/2_NPB_mg1_2": false,
+            "SCImark+NPB/2_NPB_mg1_final": true
+        },
+        "SCImark+NPB/2_NPB_bt16": {
+            "SCImark+NPB/2_NPB_bt16_0": true,
+            "SCImark+NPB/2_NPB_bt16_1": false,
+            "SCImark+NPB/2_NPB_bt16_2": false,
+            "SCImark+NPB/2_NPB_bt16_final": false
+        },
+        "SCImark+NPB/2_NPB_mg5": {
+            "SCImark+NPB/2_NPB_mg5_0": true,
+            "SCImark+NPB/2_NPB_mg5_1": true,
+            "SCImark+NPB/2_NPB_mg5_2": true,
+            "SCImark+NPB/2_NPB_mg5_final": false
+        },
+        "SCImark+NPB/2_SCImark_lu1": {
+            "SCImark+NPB/2_SCImark_lu1_0": true,
+            "SCImark+NPB/2_SCImark_lu1_1": true,
+            "SCImark+NPB/2_SCImark_lu1_2": true,
+            "SCImark+NPB/2_SCImark_lu1_final": true
+        },
+        "SCImark+NPB/2_NPB_ft2": {
+            "SCImark+NPB/2_NPB_ft2_0": true,
+            "SCImark+NPB/2_NPB_ft2_1": true,
+            "SCImark+NPB/2_NPB_ft2_2": true,
+            "SCImark+NPB/2_NPB_ft2_final": false
+        },
+        "SCImark+NPB/2_NPB_lu5": {
+            "SCImark+NPB/2_NPB_lu5_0": true,
+            "SCImark+NPB/2_NPB_lu5_1": true,
+            "SCImark+NPB/2_NPB_lu5_2": true,
+            "SCImark+NPB/2_NPB_lu5_final": true
+        },
+        "SCImark+NPB/2_NPB_lu3": {
+            "SCImark+NPB/2_NPB_lu3_0": true,
+            "SCImark+NPB/2_NPB_lu3_1": true,
+            "SCImark+NPB/2_NPB_lu3_2": true,
+            "SCImark+NPB/2_NPB_lu3_final": false
+        },
+        "SCImark+NPB/2_NPB_bt8": {
+            "SCImark+NPB/2_NPB_bt8_0": true,
+            "SCImark+NPB/2_NPB_bt8_1": true,
+            "SCImark+NPB/2_NPB_bt8_2": true,
+            "SCImark+NPB/2_NPB_bt8_final": true
+        },
+        "SCImark+NPB/2_NPB_bt4": {
+            "SCImark+NPB/2_NPB_bt4_0": false,
+            "SCImark+NPB/2_NPB_bt4_1": false,
+            "SCImark+NPB/2_NPB_bt4_2": false,
+            "SCImark+NPB/2_NPB_bt4_final": false
+        },
+        "SCImark+NPB/2_NPB_cg": {
+            "SCImark+NPB/2_NPB_cg_0": false,
+            "SCImark+NPB/2_NPB_cg_1": false,
+            "SCImark+NPB/2_NPB_cg_2": false,
+            "SCImark+NPB/2_NPB_cg_final": false
+        },
+        "SCImark+NPB/2_NPB_mg4": {
+            "SCImark+NPB/2_NPB_mg4_0": true,
+            "SCImark+NPB/2_NPB_mg4_1": true,
+            "SCImark+NPB/2_NPB_mg4_2": true,
+            "SCImark+NPB/2_NPB_mg4_final": true
+        },
+        "SCImark+NPB/2_NPB_bt7": {
+            "SCImark+NPB/2_NPB_bt7_0": false,
+            "SCImark+NPB/2_NPB_bt7_1": false,
+            "SCImark+NPB/2_NPB_bt7_2": false,
+            "SCImark+NPB/2_NPB_bt7_final": false
+        },
+        "SCImark+NPB/2_NPB_mg3": {
+            "SCImark+NPB/2_NPB_mg3_0": true,
+            "SCImark+NPB/2_NPB_mg3_1": true,
+            "SCImark+NPB/2_NPB_mg3_2": true,
+            "SCImark+NPB/2_NPB_mg3_final": true
+        }
+    },
+    "elemwise_passes": {
+        "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc": {
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_0": false,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_0": false,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_1": false,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_0": false,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_final": false
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_0": false,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_1": false,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_2": false,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_final": false
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_0": false,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_1": false,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_2": false,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky": {
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_0": false,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_1": false,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_2": false,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_final": false
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_0": false,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_1": false,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_2": false,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_final": false
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_0": false,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_2": false,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_final": false
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay": {
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_1": false,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_2": false,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_0": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_1": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_2": true,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_final": true
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_0": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_1": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_2": true,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_final": true
+        },
+        "Freebench/1_Freebench_pifft3": {
+            "Freebench/1_Freebench_pifft3_0": false,
+            "Freebench/1_Freebench_pifft3_1": false,
+            "Freebench/1_Freebench_pifft3_2": false,
+            "Freebench/1_Freebench_pifft3_final": true
+        },
+        "Freebench/1_Freebench_pifft4": {
+            "Freebench/1_Freebench_pifft4_0": false,
+            "Freebench/1_Freebench_pifft4_1": false,
+            "Freebench/1_Freebench_pifft4_2": false,
+            "Freebench/1_Freebench_pifft4_final": true
+        },
+        "Freebench/1_Freebench_pcompress2": {
+            "Freebench/1_Freebench_pcompress2_0": true,
+            "Freebench/1_Freebench_pcompress2_1": true,
+            "Freebench/1_Freebench_pcompress2_2": true,
+            "Freebench/1_Freebench_pcompress2_final": true
+        },
+        "Freebench/1_Freebench_pifft2": {
+            "Freebench/1_Freebench_pifft2_0": true,
+            "Freebench/1_Freebench_pifft2_1": true,
+            "Freebench/1_Freebench_pifft2_2": true,
+            "Freebench/1_Freebench_pifft2_final": true
+        },
+        "Freebench/1_Freebench_pifft1": {
+            "Freebench/1_Freebench_pifft1_0": true,
+            "Freebench/1_Freebench_pifft1_1": false,
+            "Freebench/1_Freebench_pifft1_2": false,
+            "Freebench/1_Freebench_pifft1_final": true
+        },
+        "SCImark+NPB/2_NPB_bt14": {
+            "SCImark+NPB/2_NPB_bt14_0": false,
+            "SCImark+NPB/2_NPB_bt14_1": true,
+            "SCImark+NPB/2_NPB_bt14_2": false,
+            "SCImark+NPB/2_NPB_bt14_final": false
+        },
+        "SCImark+NPB/2_NPB_bt": {
+            "SCImark+NPB/2_NPB_bt_0": true,
+            "SCImark+NPB/2_NPB_bt_1": true,
+            "SCImark+NPB/2_NPB_bt_2": true,
+            "SCImark+NPB/2_NPB_bt_final": false
+        },
+        "SCImark+NPB/2_NPB_bt17": {
+            "SCImark+NPB/2_NPB_bt17_0": true,
+            "SCImark+NPB/2_NPB_bt17_1": true,
+            "SCImark+NPB/2_NPB_bt17_2": true,
+            "SCImark+NPB/2_NPB_bt17_final": true
+        },
+        "SCImark+NPB/2_NPB_lu13": {
+            "SCImark+NPB/2_NPB_lu13_0": true,
+            "SCImark+NPB/2_NPB_lu13_1": true,
+            "SCImark+NPB/2_NPB_lu13_2": true,
+            "SCImark+NPB/2_NPB_lu13_final": true
+        },
+        "SCImark+NPB/2_NPB_lu7": {
+            "SCImark+NPB/2_NPB_lu7_0": true,
+            "SCImark+NPB/2_NPB_lu7_1": true,
+            "SCImark+NPB/2_NPB_lu7_2": true,
+            "SCImark+NPB/2_NPB_lu7_final": true
+        },
+        "SCImark+NPB/2_NPB_bt18": {
+            "SCImark+NPB/2_NPB_bt18_0": true,
+            "SCImark+NPB/2_NPB_bt18_1": true,
+            "SCImark+NPB/2_NPB_bt18_2": true,
+            "SCImark+NPB/2_NPB_bt18_final": true
+        },
+        "SCImark+NPB/2_NPB_bt5": {
+            "SCImark+NPB/2_NPB_bt5_0": false,
+            "SCImark+NPB/2_NPB_bt5_1": false,
+            "SCImark+NPB/2_NPB_bt5_2": false,
+            "SCImark+NPB/2_NPB_bt5_final": false
+        },
+        "SCImark+NPB/2_NPB_bt15": {
+            "SCImark+NPB/2_NPB_bt15_0": false,
+            "SCImark+NPB/2_NPB_bt15_1": false,
+            "SCImark+NPB/2_NPB_bt15_2": false,
+            "SCImark+NPB/2_NPB_bt15_final": false
+        },
+        "SCImark+NPB/2_NPB_bt11": {
+            "SCImark+NPB/2_NPB_bt11_0": true,
+            "SCImark+NPB/2_NPB_bt11_1": false,
+            "SCImark+NPB/2_NPB_bt11_2": true,
+            "SCImark+NPB/2_NPB_bt11_final": true
+        },
+        "SCImark+NPB/2_NPB_bt9": {
+            "SCImark+NPB/2_NPB_bt9_0": true,
+            "SCImark+NPB/2_NPB_bt9_1": true,
+            "SCImark+NPB/2_NPB_bt9_2": true,
+            "SCImark+NPB/2_NPB_bt9_final": false
+        },
+        "SCImark+NPB/2_NPB_bt1": {
+            "SCImark+NPB/2_NPB_bt1_0": false,
+            "SCImark+NPB/2_NPB_bt1_1": false,
+            "SCImark+NPB/2_NPB_bt1_2": false,
+            "SCImark+NPB/2_NPB_bt1_final": true
+        },
+        "SCImark+NPB/2_NPB_bt2": {
+            "SCImark+NPB/2_NPB_bt2_0": false,
+            "SCImark+NPB/2_NPB_bt2_1": true,
+            "SCImark+NPB/2_NPB_bt2_2": true,
+            "SCImark+NPB/2_NPB_bt2_final": true
+        },
+        "SCImark+NPB/2_NPB_bt6": {
+            "SCImark+NPB/2_NPB_bt6_0": false,
+            "SCImark+NPB/2_NPB_bt6_1": false,
+            "SCImark+NPB/2_NPB_bt6_2": false,
+            "SCImark+NPB/2_NPB_bt6_final": false
+        },
+        "SCImark+NPB/2_NPB_lu": {
+            "SCImark+NPB/2_NPB_lu_0": true,
+            "SCImark+NPB/2_NPB_lu_1": true,
+            "SCImark+NPB/2_NPB_lu_2": true,
+            "SCImark+NPB/2_NPB_lu_final": true
+        },
+        "SCImark+NPB/2_SCImark_sor": {
+            "SCImark+NPB/2_SCImark_sor_0": true,
+            "SCImark+NPB/2_SCImark_sor_1": true,
+            "SCImark+NPB/2_SCImark_sor_2": true,
+            "SCImark+NPB/2_SCImark_sor_final": true
+        },
+        "SCImark+NPB/2_NPB_mg1": {
+            "SCImark+NPB/2_NPB_mg1_0": true,
+            "SCImark+NPB/2_NPB_mg1_1": true,
+            "SCImark+NPB/2_NPB_mg1_2": false,
+            "SCImark+NPB/2_NPB_mg1_final": true
+        },
+        "SCImark+NPB/2_NPB_bt16": {
+            "SCImark+NPB/2_NPB_bt16_0": true,
+            "SCImark+NPB/2_NPB_bt16_1": false,
+            "SCImark+NPB/2_NPB_bt16_2": false,
+            "SCImark+NPB/2_NPB_bt16_final": false
+        },
+        "SCImark+NPB/2_NPB_mg5": {
+            "SCImark+NPB/2_NPB_mg5_0": true,
+            "SCImark+NPB/2_NPB_mg5_1": true,
+            "SCImark+NPB/2_NPB_mg5_2": true,
+            "SCImark+NPB/2_NPB_mg5_final": false
+        },
+        "SCImark+NPB/2_SCImark_lu1": {
+            "SCImark+NPB/2_SCImark_lu1_0": true,
+            "SCImark+NPB/2_SCImark_lu1_1": true,
+            "SCImark+NPB/2_SCImark_lu1_2": true,
+            "SCImark+NPB/2_SCImark_lu1_final": true
+        },
+        "SCImark+NPB/2_NPB_ft2": {
+            "SCImark+NPB/2_NPB_ft2_0": true,
+            "SCImark+NPB/2_NPB_ft2_1": true,
+            "SCImark+NPB/2_NPB_ft2_2": true,
+            "SCImark+NPB/2_NPB_ft2_final": false
+        },
+        "SCImark+NPB/2_NPB_lu5": {
+            "SCImark+NPB/2_NPB_lu5_0": true,
+            "SCImark+NPB/2_NPB_lu5_1": true,
+            "SCImark+NPB/2_NPB_lu5_2": true,
+            "SCImark+NPB/2_NPB_lu5_final": true
+        },
+        "SCImark+NPB/2_NPB_lu3": {
+            "SCImark+NPB/2_NPB_lu3_0": true,
+            "SCImark+NPB/2_NPB_lu3_1": true,
+            "SCImark+NPB/2_NPB_lu3_2": true,
+            "SCImark+NPB/2_NPB_lu3_final": false
+        },
+        "SCImark+NPB/2_NPB_bt8": {
+            "SCImark+NPB/2_NPB_bt8_0": true,
+            "SCImark+NPB/2_NPB_bt8_1": true,
+            "SCImark+NPB/2_NPB_bt8_2": true,
+            "SCImark+NPB/2_NPB_bt8_final": true
+        },
+        "SCImark+NPB/2_NPB_bt4": {
+            "SCImark+NPB/2_NPB_bt4_0": false,
+            "SCImark+NPB/2_NPB_bt4_1": false,
+            "SCImark+NPB/2_NPB_bt4_2": false,
+            "SCImark+NPB/2_NPB_bt4_final": false
+        },
+        "SCImark+NPB/2_NPB_cg": {
+            "SCImark+NPB/2_NPB_cg_0": false,
+            "SCImark+NPB/2_NPB_cg_1": false,
+            "SCImark+NPB/2_NPB_cg_2": false,
+            "SCImark+NPB/2_NPB_cg_final": false
+        },
+        "SCImark+NPB/2_NPB_mg4": {
+            "SCImark+NPB/2_NPB_mg4_0": true,
+            "SCImark+NPB/2_NPB_mg4_1": true,
+            "SCImark+NPB/2_NPB_mg4_2": true,
+            "SCImark+NPB/2_NPB_mg4_final": true
+        },
+        "SCImark+NPB/2_NPB_bt7": {
+            "SCImark+NPB/2_NPB_bt7_0": false,
+            "SCImark+NPB/2_NPB_bt7_1": false,
+            "SCImark+NPB/2_NPB_bt7_2": false,
+            "SCImark+NPB/2_NPB_bt7_final": false
+        },
+        "SCImark+NPB/2_NPB_mg3": {
+            "SCImark+NPB/2_NPB_mg3_0": true,
+            "SCImark+NPB/2_NPB_mg3_1": true,
+            "SCImark+NPB/2_NPB_mg3_2": true,
+            "SCImark+NPB/2_NPB_mg3_final": true
+        }
+    },
+    "run_times": {
+        "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc": {
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_0": 0.412828,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_1": 0.451678,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_2": 0.444783,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_SlipRateCalc_final": 0.439183
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_0": Infinity,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_1": 1.135226,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_2": 1.167776,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_dict2pid_build_final": 0.470008
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_0": Infinity,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_1": Infinity,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_2": 0.234168,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractMatrix_final": 0.342723
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_0": Infinity,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_1": 3.790355,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_2": 3.938556,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixR_final": Infinity
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_0": Infinity,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_1": Infinity,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_2": Infinity,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_2_final": Infinity
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_0": Infinity,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_1": Infinity,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_2": Infinity,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_lda_inference_1_final": 2.599357
+        },
+        "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky": {
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_0": Infinity,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_1": Infinity,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_2": Infinity,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_Crystal_Cholesky_final": Infinity
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_0": Infinity,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_1": Infinity,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_2": Infinity,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_makeZeroMatrix_final": Infinity
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_0": Infinity,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_1": 4.35528,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_2": Infinity,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_multiplyMatrix_final": Infinity
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_0": 3.103575,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_1": 3.355664,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_2": 3.322572,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_get_mean_image_final": 3.141759
+        },
+        "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay": {
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_0": 1.757708,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_1": 1.654852,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_2": 2.320542,
+            "ALPBench+ASC+Cortexsuite/1_ASC_Sequoia_MS_Xtal_PowerTay_final": 2.164989
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_0": 1.337596,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_1": 1.356794,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_2": 1.470436,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_Eigen_reduction_1_final": 1.436724
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_0": 1.458488,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_1": 1.447213,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_2": 1.314544,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_addMatrixEquals_final": 2.280007
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_0": 2.258966,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_1": 1.360326,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_2": 1.193184,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_subtractClassMean_final": 1.16098
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_0": 2.508649,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_1": Infinity,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_2": Infinity,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_1_final": 2.471679
+        },
+        "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL": {
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_0": 4.112512,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_1": 3.230807,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_2": 3.463252,
+            "ALPBench+ASC+Cortexsuite/1_ALPBench_transposeMultiplyMatrixL_final": 3.689014
+        },
+        "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2": {
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_0": 3.218271,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_1": 3.172101,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_2": 3.233902,
+            "ALPBench+ASC+Cortexsuite/1_Cortexsuite_corcol_2_final": 3.421939
+        },
+        "Freebench/1_Freebench_pifft3": {
+            "Freebench/1_Freebench_pifft3_0": Infinity,
+            "Freebench/1_Freebench_pifft3_1": Infinity,
+            "Freebench/1_Freebench_pifft3_2": Infinity,
+            "Freebench/1_Freebench_pifft3_final": 0.518987
+        },
+        "Freebench/1_Freebench_pifft4": {
+            "Freebench/1_Freebench_pifft4_0": Infinity,
+            "Freebench/1_Freebench_pifft4_1": Infinity,
+            "Freebench/1_Freebench_pifft4_2": Infinity,
+            "Freebench/1_Freebench_pifft4_final": 0.227771
+        },
+        "Freebench/1_Freebench_pcompress2": {
+            "Freebench/1_Freebench_pcompress2_0": 1.12465,
+            "Freebench/1_Freebench_pcompress2_1": 1.161781,
+            "Freebench/1_Freebench_pcompress2_2": 1.187688,
+            "Freebench/1_Freebench_pcompress2_final": 0.449163
+        },
+        "Freebench/1_Freebench_pifft2": {
+            "Freebench/1_Freebench_pifft2_0": 2.7864,
+            "Freebench/1_Freebench_pifft2_1": 2.858131,
+            "Freebench/1_Freebench_pifft2_2": 1.418375,
+            "Freebench/1_Freebench_pifft2_final": 2.810835
+        },
+        "Freebench/1_Freebench_pifft1": {
+            "Freebench/1_Freebench_pifft1_0": 0.350434,
+            "Freebench/1_Freebench_pifft1_1": Infinity,
+            "Freebench/1_Freebench_pifft1_2": Infinity,
+            "Freebench/1_Freebench_pifft1_final": 0.32988
+        },
+        "SCImark+NPB/2_NPB_bt14": {
+            "SCImark+NPB/2_NPB_bt14_0": Infinity,
+            "SCImark+NPB/2_NPB_bt14_1": 1.27327,
+            "SCImark+NPB/2_NPB_bt14_2": Infinity,
+            "SCImark+NPB/2_NPB_bt14_final": Infinity
+        },
+        "SCImark+NPB/2_NPB_bt": {
+            "SCImark+NPB/2_NPB_bt_0": 0.860467,
+            "SCImark+NPB/2_NPB_bt_1": 0.645337,
+            "SCImark+NPB/2_NPB_bt_2": 0.685568,
+            "SCImark+NPB/2_NPB_bt_final": Infinity
+        },
+        "SCImark+NPB/2_NPB_bt17": {
+            "SCImark+NPB/2_NPB_bt17_0": 0.879997,
+            "SCImark+NPB/2_NPB_bt17_1": 1.039929,
+            "SCImark+NPB/2_NPB_bt17_2": 1.000905,
+            "SCImark+NPB/2_NPB_bt17_final": 0.912558
+        },
+        "SCImark+NPB/2_NPB_lu13": {
+            "SCImark+NPB/2_NPB_lu13_0": 3.019678,
+            "SCImark+NPB/2_NPB_lu13_1": 2.946181,
+            "SCImark+NPB/2_NPB_lu13_2": 2.725144,
+            "SCImark+NPB/2_NPB_lu13_final": 2.670917
+        },
+        "SCImark+NPB/2_NPB_lu7": {
+            "SCImark+NPB/2_NPB_lu7_0": 1.663378,
+            "SCImark+NPB/2_NPB_lu7_1": 1.609578,
+            "SCImark+NPB/2_NPB_lu7_2": 1.600909,
+            "SCImark+NPB/2_NPB_lu7_final": 1.282336
+        },
+        "SCImark+NPB/2_NPB_bt18": {
+            "SCImark+NPB/2_NPB_bt18_0": 2.222044,
+            "SCImark+NPB/2_NPB_bt18_1": 2.164625,
+            "SCImark+NPB/2_NPB_bt18_2": 2.275172,
+            "SCImark+NPB/2_NPB_bt18_final": 2.340611
+        },
+        "SCImark+NPB/2_NPB_bt5": {
+            "SCImark+NPB/2_NPB_bt5_0": Infinity,
+            "SCImark+NPB/2_NPB_bt5_1": Infinity,
+            "SCImark+NPB/2_NPB_bt5_2": Infinity,
+            "SCImark+NPB/2_NPB_bt5_final": Infinity
+        },
+        "SCImark+NPB/2_NPB_bt15": {
+            "SCImark+NPB/2_NPB_bt15_0": Infinity,
+            "SCImark+NPB/2_NPB_bt15_1": Infinity,
+            "SCImark+NPB/2_NPB_bt15_2": Infinity,
+            "SCImark+NPB/2_NPB_bt15_final": Infinity
+        },
+        "SCImark+NPB/2_NPB_bt11": {
+            "SCImark+NPB/2_NPB_bt11_0": 8.388593,
+            "SCImark+NPB/2_NPB_bt11_1": Infinity,
+            "SCImark+NPB/2_NPB_bt11_2": 4.047656,
+            "SCImark+NPB/2_NPB_bt11_final": 5.254663
+        },
+        "SCImark+NPB/2_NPB_bt9": {
+            "SCImark+NPB/2_NPB_bt9_0": 0.903436,
+            "SCImark+NPB/2_NPB_bt9_1": 0.879386,
+            "SCImark+NPB/2_NPB_bt9_2": 0.927477,
+            "SCImark+NPB/2_NPB_bt9_final": Infinity
+        },
+        "SCImark+NPB/2_NPB_bt1": {
+            "SCImark+NPB/2_NPB_bt1_0": Infinity,
+            "SCImark+NPB/2_NPB_bt1_1": Infinity,
+            "SCImark+NPB/2_NPB_bt1_2": Infinity,
+            "SCImark+NPB/2_NPB_bt1_final": 1.941822
+        },
+        "SCImark+NPB/2_NPB_bt2": {
+            "SCImark+NPB/2_NPB_bt2_0": Infinity,
+            "SCImark+NPB/2_NPB_bt2_1": 5.526434,
+            "SCImark+NPB/2_NPB_bt2_2": 5.071246,
+            "SCImark+NPB/2_NPB_bt2_final": 5.672231
+        },
+        "SCImark+NPB/2_NPB_bt6": {
+            "SCImark+NPB/2_NPB_bt6_0": Infinity,
+            "SCImark+NPB/2_NPB_bt6_1": Infinity,
+            "SCImark+NPB/2_NPB_bt6_2": Infinity,
+            "SCImark+NPB/2_NPB_bt6_final": Infinity
+        },
+        "SCImark+NPB/2_NPB_lu": {
+            "SCImark+NPB/2_NPB_lu_0": 4.711093,
+            "SCImark+NPB/2_NPB_lu_1": 4.49454,
+            "SCImark+NPB/2_NPB_lu_2": 4.546468,
+            "SCImark+NPB/2_NPB_lu_final": 6.15942
+        },
+        "SCImark+NPB/2_SCImark_sor": {
+            "SCImark+NPB/2_SCImark_sor_0": 4.4111,
+            "SCImark+NPB/2_SCImark_sor_1": 5.777841,
+            "SCImark+NPB/2_SCImark_sor_2": 4.62639,
+            "SCImark+NPB/2_SCImark_sor_final": 4.376099
+        },
+        "SCImark+NPB/2_NPB_mg1": {
+            "SCImark+NPB/2_NPB_mg1_0": 2.921405,
+            "SCImark+NPB/2_NPB_mg1_1": 4.996014,
+            "SCImark+NPB/2_NPB_mg1_2": Infinity,
+            "SCImark+NPB/2_NPB_mg1_final": 2.928149
+        },
+        "SCImark+NPB/2_NPB_bt16": {
+            "SCImark+NPB/2_NPB_bt16_0": 2.676372,
+            "SCImark+NPB/2_NPB_bt16_1": Infinity,
+            "SCImark+NPB/2_NPB_bt16_2": Infinity,
+            "SCImark+NPB/2_NPB_bt16_final": Infinity
+        },
+        "SCImark+NPB/2_NPB_mg5": {
+            "SCImark+NPB/2_NPB_mg5_0": 6.986506,
+            "SCImark+NPB/2_NPB_mg5_1": 5.254366,
+            "SCImark+NPB/2_NPB_mg5_2": 5.646126,
+            "SCImark+NPB/2_NPB_mg5_final": Infinity
+        },
+        "SCImark+NPB/2_SCImark_lu1": {
+            "SCImark+NPB/2_SCImark_lu1_0": 1.882325,
+            "SCImark+NPB/2_SCImark_lu1_1": 1.624395,
+            "SCImark+NPB/2_SCImark_lu1_2": 1.903793,
+            "SCImark+NPB/2_SCImark_lu1_final": 1.125079
+        },
+        "SCImark+NPB/2_NPB_ft2": {
+            "SCImark+NPB/2_NPB_ft2_0": 2.242083,
+            "SCImark+NPB/2_NPB_ft2_1": 2.014884,
+            "SCImark+NPB/2_NPB_ft2_2": 1.659622,
+            "SCImark+NPB/2_NPB_ft2_final": Infinity
+        },
+        "SCImark+NPB/2_NPB_lu5": {
+            "SCImark+NPB/2_NPB_lu5_0": 1.325158,
+            "SCImark+NPB/2_NPB_lu5_1": 1.301801,
+            "SCImark+NPB/2_NPB_lu5_2": 1.258903,
+            "SCImark+NPB/2_NPB_lu5_final": 1.241014
+        },
+        "SCImark+NPB/2_NPB_lu3": {
+            "SCImark+NPB/2_NPB_lu3_0": 1.058443,
+            "SCImark+NPB/2_NPB_lu3_1": 1.052569,
+            "SCImark+NPB/2_NPB_lu3_2": 1.059925,
+            "SCImark+NPB/2_NPB_lu3_final": Infinity
+        },
+        "SCImark+NPB/2_NPB_bt8": {
+            "SCImark+NPB/2_NPB_bt8_0": 3.03393,
+            "SCImark+NPB/2_NPB_bt8_1": 2.865251,
+            "SCImark+NPB/2_NPB_bt8_2": 2.863041,
+            "SCImark+NPB/2_NPB_bt8_final": 3.171702
+        },
+        "SCImark+NPB/2_NPB_bt4": {
+            "SCImark+NPB/2_NPB_bt4_0": Infinity,
+            "SCImark+NPB/2_NPB_bt4_1": Infinity,
+            "SCImark+NPB/2_NPB_bt4_2": Infinity,
+            "SCImark+NPB/2_NPB_bt4_final": Infinity
+        },
+        "SCImark+NPB/2_NPB_cg": {
+            "SCImark+NPB/2_NPB_cg_0": Infinity,
+            "SCImark+NPB/2_NPB_cg_1": Infinity,
+            "SCImark+NPB/2_NPB_cg_2": Infinity,
+            "SCImark+NPB/2_NPB_cg_final": Infinity
+        },
+        "SCImark+NPB/2_NPB_mg4": {
+            "SCImark+NPB/2_NPB_mg4_0": 3.402633,
+            "SCImark+NPB/2_NPB_mg4_1": 3.41704,
+            "SCImark+NPB/2_NPB_mg4_2": 3.459889,
+            "SCImark+NPB/2_NPB_mg4_final": 3.396304
+        },
+        "SCImark+NPB/2_NPB_bt7": {
+            "SCImark+NPB/2_NPB_bt7_0": Infinity,
+            "SCImark+NPB/2_NPB_bt7_1": Infinity,
+            "SCImark+NPB/2_NPB_bt7_2": Infinity,
+            "SCImark+NPB/2_NPB_bt7_final": Infinity
+        },
+        "SCImark+NPB/2_NPB_mg3": {
+            "SCImark+NPB/2_NPB_mg3_0": 3.921864,
+            "SCImark+NPB/2_NPB_mg3_1": 3.93643,
+            "SCImark+NPB/2_NPB_mg3_2": 4.659808,
+            "SCImark+NPB/2_NPB_mg3_final": 4.492645
+        }
+    }
+}

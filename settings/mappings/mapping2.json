@@ -1,0 +1,29 @@
+{
+  "mappings": {
+    "properties": {
+      "filename": {
+        "type": "text"
+      },
+      "code": {
+        "type": "text",
+        "analyzer": "standard",
+        "similarity": "BM25"
+      },
+      "opt_code": {
+        "type": "text",
+        "analyzer": "standard"
+      },
+      "loop_levels": {
+        "type": "integer"
+      },
+      "embedding": {
+        "type": "dense_vector",
+        "dims": 4096
+      },
+      "opt_embedding": {
+        "type": "dense_vector",
+        "dims": 4096
+      }
+    }
+  }
+}

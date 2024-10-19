@@ -1,0 +1,59 @@
+{
+    "settings": {
+        "analysis": {
+            "tokenizer": {
+                "custom_code_tokenizer": {
+                    "type": "pattern",
+                    "pattern": "(\\d+\\.\\d*|\\d*\\.\\d+|\\d+|\\w+(?:\\[[^\\[\\]]+\\])+|\\w+|\\+\\+|--|[^\\w\\s])",
+                    "group": 1
+                }
+            },
+            "analyzer": {
+                "custom_code_analyzer": {
+                    "type": "custom",
+                    "tokenizer": "custom_code_tokenizer",
+                    "char_filter": [],
+                    "filter": []
+                }
+            }
+        }
+    },
+    "mappings": {
+        "properties": {
+            "code": {
+                "type": "text",
+                "analyzer": "custom_code_analyzer",
+                "similarity": "BM25"
+            },
+            "opt_code": {
+                "type": "text",
+                "analyzer": "custom_code_analyzer",
+                "similarity": "BM25"
+            },
+            "filename": {
+                "type": "keyword",
+                "ignore_above": 256
+            },
+            "info": {
+                "type": "nested",
+                "properties": {
+                    "stmt_id": {
+                        "type": "integer"
+                    },
+                    "depth_schedule": {
+                        "type": "integer"
+                    },
+                    "schedule": {
+                        "type": "keyword"
+                    },
+                    "depth_indexes": {
+                        "type": "integer"
+                    },
+                    "indexes": {
+                        "type": "keyword"
+                    }
+                }
+            }
+        }
+    }
+}

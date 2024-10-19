@@ -1,0 +1,21 @@
+{
+  "mappings": {
+    "properties": {
+      "filename": {
+        "type": "text"
+      },
+      "code": {
+        "type": "text",
+        "analyzer": "standard",
+        "similarity": "BM25"
+      },
+      "opt_code": {
+        "type": "text",
+        "analyzer": "standard"
+      },
+      "loop_levels": {
+        "type": "integer"
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{  
+  "settings": {  
+    "analysis": {  
+      "tokenizer": {  
+        "custom_code_tokenizer": {  
+          "type": "pattern",  
+          "pattern": "(\\d+\\.\\d*|\\d*\\.\\d+|\\d+|\\w+(?:\\[[^\\[\\]]+\\])+|\\w+|\\+\\+|--|[^\\w\\s])",  
+          "group": 1  
+        }  
+      },  
+      "analyzer": {  
+        "custom_code_analyzer": {  
+          "type": "custom",  
+          "tokenizer": "custom_code_tokenizer",  
+          "char_filter": [],  
+          "filter": []  
+        }  
+      }  
+    },  
+    "similarity": {  
+      "scripted_bm25": {  
+        "type": "scripted",  
+        "weight_script": {  
+          "source": "double idf = Math.log((field.docCount + 1.0) / (term.docFreq + 1.0)) + 1.0; return query.boost * idf;"  
+        },  
+        "script": {  
+          "source": "double k1 =  1.2; double t=term.frequency; double b = 0.75; double tf = doc.freq / (doc.freq + k1 * (1.0 - b + b * doc.length / 76.62713145966255  )); return weight * tf;",  
+          "params": {  
+            "avgdl": 76.62713145966255  
+          }  
+        }  
+      }  
+    }  
+  },  
+  "mappings": {  
+    "properties": {  
+      "code": {  
+        "type": "text",  
+        "analyzer": "custom_code_analyzer",  
+        "similarity": "scripted_bm25"  
+      },  
+      "opt_code": {  
+        "type": "text",  
+        "analyzer": "custom_code_analyzer"  
+      }  
+    }  
+  }  
+}

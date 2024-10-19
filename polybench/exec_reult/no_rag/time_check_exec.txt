@@ -1,0 +1,1 @@
+exec time for code in /datadisk4/cyy/rag_code/polybench/polybench_norag/polybench: 43.56437706947327 seconds.
